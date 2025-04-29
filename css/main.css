@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+/* Place CSS styles here */
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #c7ced4;
+    color: black;
+    font-size: 30px;
+    margin: 0;
+    padding: 0%;
+    font-family: Arial, sans-serif;
+}
+
+.container{
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    padding: 0;
+    text-align: center;
+    box-shadow: 0 2px 4px #51585e;
+    background: #778c9f;
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.header nav{
+    display: flex;
+    justify-content: center;
+    box-sizing:border-box;
+}
+
+.header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 25px;
+}
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 16px;
+        padding: 5px;
+    }
+}
+
+.offcanvas-nav {
+    position: relative; /* To position the menu within */
+  }
+
+  .menu {
+    position: fixed; /* Fixed position for overlay effect */
+    top: 164px;
+    right: 0;
+    height: 100%;
+    width: 250px; /* Adjust width as needed */
+    background-color: #778c9f;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    transform: translateX(100%); /* Initially slide out to the left */
+    transition: transform 0.3s ease; /* Smooth transition */
+    z-index: 1000; 
+  }
+
+
+  .menu.expanded {
+    transform: translateX(0); /* Slide in when expanded */
+  }
+
+ /* Style the menu button */
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+/* Create the three hamburger lines */
+.menu-toggle .hamburger,
+.menu-toggle .hamburger::before,
+.menu-toggle .hamburger::after {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
+}
+
+/* Position the middle line */
+.menu-toggle .hamburger {
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%,-50%);
+}
+
+/* Position the top line */
+.menu-toggle .hamburger::before {
+    top: -8px;
+    left: 0;
+    position: absolute;
+}
+
+/* Position the bottom line */
+.menu-toggle .hamburger::after {
+    bottom: -8px;
+    left: 0;
+    position: absolute;
+}
+
+/* When menu is active (open), transform into an "X" */
+.menu-toggle.active .hamburger {
+    background-color: transparent;
+}
+
+.menu-toggle.active .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.menu-toggle.active .hamburger::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+  @media (min-width: 768px) {
+  .offcanvas-nav {
+      display: block; /* Show the full navigation on larger screens */
+    }
+  .menu {
+      display: block; /* Ensure menu is visible on larger screens */
+      position: static; /* Remove fixed positioning */
+      width: auto;
+      transform: none; /* No need for transitions */
+      box-shadow: none;
+    }
+  .menu-toggle {
+      display: none; /* Hide the toggle button on larger screens */
+    }
+  }
+
+
+.parallax {
+    background-image: url(../img/glaciers.jpg);
+    min-height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    margin:0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    margin-top: 0;
+    padding-top:0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll;
+        background-size: cover;
+        min-height: 300px;
+    }
+}
+
+
+.logo {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+    padding: 100px;
+    box-sizing:border-box;
+
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 22px;  /* Reduce title size for small screens */
+        padding: 20px;
+        letter-spacing: 4px; /* Reduce letter spacing */
+        max-width: 90%;
+    }
+}
+
+
+.locations {
+    background: #9cb5c9;
+    box-shadow: 0 2px 4px #51585e;
+    position: center;
+    top: 0;
+   
+}
+.locations nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    box-sizing:border-box;
+}
+.locations nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 40px;
+    font-size: 14px;
+    position: relative;
+}
+
+
+.text {
+    text-align: center;
+    padding: 50px;
+    box-sizing:border-box;
+}
+
+.content {
+    padding: 50px;
+    text-align: center;
+}
+
+.locationsandcontent-flex-row{
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.locations-flex-row-item-1 {
+    flex: 1; /* Both take equal space */
+    min-width: 300px; /* Prevents them from shrinking too much */
+}
+
+.content-flex-row-item-2{
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.image-content{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+.image-content h2{
+    font-size: 60px;
+    color: black;
+}
+
+.image-content img{
+    width: 65%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px #51585e;
+
+}
+
+.image-description{
+    font-size: 26px;
+    color: black;
+    max-width: 80%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .locationsandcontent-flex-row {
+        flex-direction: column; /* Stack elements */
+    }
+
+    .image-description {
+        font-size: 16px;
+        max-width: 90%;
+    }
+
+    .image-content img {
+        width: 90%;  /* Increase size for smaller screens */
+        max-width: 400px; /* Adjust max width */
+    }
+
+    .locations-flex-row-item-1,
+    .content-flex-row-item-2 {
+        min-width: 100%;
+    }
+}
+
+
+.blog-container{
+    display:flex;
+    padding: 30px;
+    gap:30px;
+    justify-content: center;
+}
+
+.top {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    color: #333;
+}
+
+.top a {
+    color: #333;
+    text-decoration: none;
+}
+
+.top a:hover {
+    text-decoration: underline;
+}
+      
+@media screen and (max-width: 768px) {
+    .text, .content {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+footer {
+    background-color: #778c9f;
+    color: rgb(7, 6, 6);
+    padding: 15px;
+    text-align: center;
+}

@@ -1,0 +1,41 @@
+<form action="./thank-you.html" id="registrationForm"></form>
+    
+    <div class="popup-overlay" id="popupOverlay">
+
+    <div class="popup" id="popup">
+
+        <span class="close" id="closePopup">&times;</span>
+
+        <div class="popup-content">
+
+            <p>Welcome to our website!</p>
+
+            <p>Sign up to be a part of the newsletter!</p>
+
+            <form action="./contact.html" id="popup">
+
+
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required autocomplete="given-name" autofocus>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
+                <span id="lastNameError" class="error"></span><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+                <span id="emailError" class="error"></span><br><br>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required><br><br>
+
+                
+                <button onclick="submitForm()">Sign Up</button>
+
+        </div>
+
+    </div>
+
+</form>
+
+<script src="script.js"></script>
