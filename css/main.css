@@ -42,20 +42,47 @@ body {
 }
 
 .hero {
-  text-align: center;
-  padding: 100px 20px;
-}
+    background-image: url('../img/background.jpeg'); /* your actual image */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 60vh; /* <<< your change */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* 0.2 = 20% opacity */
+    z-index: 1;
+  }
+  
+  .hero h1 {
+    font-size: 72px; /* was maybe 48px — now much bigger */
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000000;
 
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 24px;
-  color: #666;
-}
-
+  }
+  
+  .hero p {
+    font-size: 32px; /* bigger tagline */
+    font-weight: 400;
+    color: #000000;
+  }
+  
 .portfolio {
   padding: 60px 20px;
   max-width: 1200px;
@@ -86,7 +113,8 @@ body {
 
 .portfolio-grid img {
   width: 100%;
-  height: auto;
+  height: 250px;
+  object-fit: cover;
   border-radius: 8px;
   margin-bottom: 10px;
 }
@@ -152,3 +180,115 @@ footer {
   font-size: 14px;
   color: #aaa;
 }
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+  }
+  
+  .about-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .about-image img {
+    width: 180px; /* smaller size */
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%; /* circle profile photo */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* optional soft shadow */
+  }
+  
+  .about-text {
+    flex: 1;
+  }
+  
+  .about-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-image img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  .social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .social-links a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-links a img:hover {
+    transform: scale(1.2);
+  }
+  
+
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  .contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  .contact-form button {
+    background-color: #0077ff;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #005fcc;
+  }
+  
+  
+  
+  
