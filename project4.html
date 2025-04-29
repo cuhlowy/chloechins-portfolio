@@ -12,20 +12,46 @@
 </head>
 <body>
   <header class="header">
-    <nav>
-      <a href="index.html">Home</a>
-    </nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Chloe Chin Logo">
+      </a>     
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
-
+  
   <section class="project-detail">
-    <img src="img/fishfriends.png" alt="Generative Code">
-    <h1>3D Modeled Restaurant</h1>
-    <p>A 3D modeled environment project where I designed a cozy restaurant space from scratch, focusing on detailed textures, lighting, and spatial arrangement to create an inviting atmosphere. Tools used: Blender, Photoshop.</p>
-    <a href="index.html">&larr; Back to Portfolio</a>
+    <div class="project-container">
+      <div class="project-image">
+        <img src="img/fishfriends.png" alt="Fish Friends image" class="popup-image">
+      </div>
+      <div class="project-text">
+        <h1>Fish Friends</h1>
+        <p>This playful digital illustration celebrates friendship and inclusion through a whimsical underwater scene. Each fish is paired with a friend, highlighting a world where no one is left out. The piece emphasizes connection, balance, and belonging—where every character has a match and a place to be.</p>
+      </div>
+    </div>
+  
+  
+    <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
   </section>
+  
 
   <footer>
     &copy; 2025 Chloe Chin
   </footer>
+  <script src="js/main.js"></script>
+
 </body>
 </html>

@@ -12,23 +12,49 @@
 </head>
 <body>
   <header class="header">
-    <nav>
-      <a href="index.html">Home</a>
-    </nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Chloe Chin Logo">
+      </a>     
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
-
+  
   <section class="project-detail">
-    <img src="img/characterdesignimg1.png" alt="character design image 1">
-    <h1>Character Designs</h1>
-    <p>A 3D modeled environment project where I designed a cozy restaurant space from scratch, focusing on detailed textures, lighting, and spatial arrangement to create an inviting atmosphere. Tools used: Blender, Photoshop.</p>
-    <div class="project-images">
-        <img src="img/characterdesignimg2.png" alt="character design image 2">
+    <div class="project-container">
+      <div class="project-image">
+        <img src="img/characterdesignimg1.png" alt="Cat Boy Image" class="popup-image">
       </div>
-    <a href="index.html">&larr; Back to Portfolio</a>
+      <div class="project-text">
+        <h1>Character Designs</h1>
+        <p>This project features original character turnarounds exploring personality through silhouette, expression, and color. Each character is designed with distinctive traits—from posture and clothing to facial structure and emotional tone. The red-toned character embodies confidence and sharpness, while the blue-toned character feels relaxed and introspective. Together, they showcase stylized anatomy and thoughtful design choices rooted in storytelling.</p>
+      </div>
+    </div>
+  
+    <div class="project-images">
+      <img src="img/characterdesignimg2.png" alt="Cat Woman Image" class="popup-image">
+    </div>
+  
+    <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
   </section>
+  
 
   <footer>
     &copy; 2025 Chloe Chin
   </footer>
+  <script src="js/main.js"></script>
+
 </body>
 </html>

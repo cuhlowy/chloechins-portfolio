@@ -12,21 +12,46 @@
 </head>
 <body>
   <header class="header">
-    <nav>
-      <a href="index.html">Home</a>
-    </nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Chloe Chin Logo">
+      </a>      
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
-
+  
   <section class="project-detail">
-    <img src="img/thirdeye.png" alt="third eye image">
-    <h1>Third Eye</h1>
-    <p>A 3D modeled environment project where I designed a cozy restaurant space from scratch, focusing on detailed textures, lighting, and spatial arrangement to create an inviting atmosphere. Tools used: Blender, Photoshop.</p>
-   
-    <a href="index.html">&larr; Back to Portfolio</a>
+    <div class="project-container">
+      <div class="project-image">
+        <img src="img/thirdeye.png" alt="Third Eye Image" class="popup-image">
+      </div>
+      <div class="project-text">
+        <h1>Third Eye</h1>
+        <p>This digital portrait explores perception and inner awareness through surreal symbolism. A third eye, carefully opened by the subject’s own hand, represents insight beyond the visible world. Soft textures and warm tones contrast with the eerie, centered gaze, blending realism and imagination to evoke themes of identity, intuition, and self-revelation.</p>
+      </div>
+    </div>
+  
+  
+    <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
   </section>
+  
 
   <footer>
     &copy; 2025 Chloe Chin
   </footer>
+  <script src="js/main.js"></script>
+
 </body>
 </html>

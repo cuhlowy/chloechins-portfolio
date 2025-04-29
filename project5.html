@@ -12,20 +12,47 @@
 </head>
 <body>
   <header class="header">
-    <nav>
-      <a href="index.html">Home</a>
-    </nav>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Chloe Chin Logo">
+      </a>     
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+      
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
+  
 
   <section class="project-detail">
-    <img src="img/beetles.png" alt="beetles">
-    <h1>Beetle on the Road</h1>
-    <p>A 3D modeled environment project where I designed a cozy restaurant space from scratch, focusing on detailed textures, lighting, and spatial arrangement to create an inviting atmosphere. Tools used: Blender, Photoshop.</p>
-    <a href="index.html">&larr; Back to Portfolio</a>
+    <div class="project-container">
+      <div class="project-image">
+        <img src="img/beetles.png" alt="Beetles Image" class="popup-image">
+      </div>
+      <div class="project-text">
+        <h1>Beetle on the Road!</h1>
+        <p>This energetic illustration captures a beetle mid-journey, bold against a vibrant background. Inspired by movement and street-style poster art, the piece uses expressive text, saturated colors, and a central beetle figure to create a sense of action and personality. It’s a small creature with a big presence — ready to take on the road.</p>
+      </div>
+    </div>
+
+  
+    <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
   </section>
+  
 
   <footer>
     &copy; 2025 Chloe Chin
   </footer>
+  <script src="js/main.js"></script>
+
 </body>
 </html>
