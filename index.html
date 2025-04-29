@@ -2,8 +2,9 @@
 
 <html class="no-js" lang="en">
 <head>
-  <title>Stonehead Traveler</title>
-  <meta name="description" content="Explore the beauty of the Nordic countries.">
+  <title>Nature's Skin</title>
+  <meta name="description" content="A website about natural skincare products.">
+  <meta name="author" content="Chloe Chin">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="css/normalize.css">
@@ -19,62 +20,93 @@
     <nav id="offcanvas-menu" class="menu">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="blog.html">Blog</a>
-        <a href="resources.html">Resources</a>
+        <a href="bestsellers.html">Bestsellers</a>
+        <a href="resources.html">Skincare</a>
+        <a href="resources.html">Hair + Body</a>
+        <a href="contact.html">Join our newsletter!</a>
+
+
     </nav>
   </header>
 
 <div class="container">
 
   <div class="parallax">
-    <div class="logo"><h1>Stonehead Traveler</h1></div>
+    <div class="logo"><h1>Nature's Skin</h1></div>
   </div>
 
-  <div class="locations">
-    <nav>
-        <a href="#iceland"><h2>Iceland</h2></a>
-        <a href="#denmark"><h2>Denmark</h2></a>
-        <a href="#sweden"><h2>Sweden</h2></a>
-    </nav>
+
+
+  <div class="hero">
+    <h2>Welcome to Nature's Skin</h2>
+    <p>Discover the benefits of natural skincare products and how they can help you achieve healthy, radiant skin. Our products are made with natural ingredients that are gentle on the skin and free of harmful chemicals. Explore our range of skincare products and find the perfect solution for your skin type.</p>
   </div>
 
-  <div class="locationsandcontent-flex-row">
+  <div class="cream-doctor-flex-row">
 
-    <div class="locations-flex-row-item-1"> 
-      <div class="text" id="iceland">
-        <h2>Iceland</h2>
-        <p>Explore the land of fire and ice.</p>
-      </div>
-      <div class="text" id="denmark">
-        <h2>Denmark</h2>
-        <p>Discover the beauty of Denmark.</p>
-      </div>
-      <div class="text" id="sweden">
-        <h2>Sweden</h2>
-        <p>Experience the charm of Sweden.</p>
+    <div class="cream-flex-row-item-1"> 
+      <div class="cream-content">
+        <h2>Bestseller Creams</h2>
+        <p>Check out the creams everyone loves!</p>
+        <a href="bestsellers.html" class="button">
+        <img src="./img/bestsellers.jpg" alt="Image of cream swatches">
+      </a>
       </div>
     </div>
+
   
-    <div class="content-flex-row-item-2">
-      <div class="image-content">
-          <h2>Meet Sung</h2>
-          <img src="./img/giz2.jpg" alt="Meet Sung">
+    <div class="doctor-flex-row-item-2">
+      <div class="doctor-content">
+          <h2>Meet Dr.Smith</h2>
+          <img src="./img/giz2.jpg" alt="Image of Dr.Smith">
           <p class="image-description">
-            Sung is a travel enthusiast who has visited over 30 countries. He is passionate about exploring new cultures and sharing his experiences with others.
+            Dr. John Smith is a dermatologist who has been practicing for over 20 years. He is passionate about natural skincare and has been researching the benefits of natural ingredients for the skin. Dr. Smith has created a line of skincare products that are made with natural ingredients and are free of harmful chemicals. His products are designed to nourish and protect the skin, leaving it looking healthy and radiant.
           </p>
       </div>
   </div>
   
   </div>
  
-
-<div class="top">
-  <a href="#top">Back to Top</a>
-</div>
      
 
 
   </div>
+
+  <div class="newsletter-container">
+    <form class="newsletter-form" action="thankyou.html" method="post">
+      <span>
+    <h2>Join our newsletter!</h2>
+    <p>Subscribe for the latest updates, special deals, and skincare tips straight to your inbox!</p>
+    <form class="newsletter-form">
+      <div class="name-container">
+        <div class="input-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required autocomplete="name" placeholder="Enter your name">
+          
+        </div>
+        </div>
+       
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required autocomplete="email" placeholder="Enter your email address">
+      <span id="emailError" class="error"></span><br><br>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required><br><br>
+
+      
+      <button onclick="submitForm()">Sign Up</button>
+    </form>
+
+    <p class="privacy-text">No spam, unsubscribe anytime.</p>
+  </span>
+    </form>
+</div>
+
+
+<div class="top">
+  <a href="#top">Back to Top</a>
+</div>
 
   <footer> 
     <span>Made with ... </span>

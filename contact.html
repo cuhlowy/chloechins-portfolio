@@ -1,41 +1,72 @@
-<form action="./thank-you.html" id="registrationForm"></form>
+<html class="no-js" lang="en">
+<head>
+  <title>Nature's Skin</title>
+  <meta name="description" content="A website about natural skincare products.">
+  <meta name="author" content="Chloe Chin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body id="top">
+
+    <header class="header">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="offcanvas-menu">
+          <span class="hamburger"></span>
+      </button>  
+        <nav id="offcanvas-menu" class="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="bestsellers.html">Bestsellers</a>
+            <a href="resources.html">Skincare</a>
+            <a href="resources.html">Hair + Body</a>
+            <a href="contact.html">Join our newsletter!</a>
     
-    <div class="popup-overlay" id="popupOverlay">
+    
+        </nav>
+      </header>
 
-    <div class="popup" id="popup">
-
-        <span class="close" id="closePopup">&times;</span>
-
-        <div class="popup-content">
-
-            <p>Welcome to our website!</p>
-
-            <p>Sign up to be a part of the newsletter!</p>
-
-            <form action="./contact.html" id="popup">
-
-
-                <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" required autocomplete="given-name" autofocus>
-
-                <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" required autocomplete="family-name">
-                <span id="lastNameError" class="error"></span><br><br>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required autocomplete="email">
-                <span id="emailError" class="error"></span><br><br>
-
-                <label for="dob">Date of Birth:</label>
-                <input type="date" id="dob" name="dob" required><br><br>
-
-                
-                <button onclick="submitForm()">Sign Up</button>
-
+<div class="newsletter-container">
+    <form class="newsletter-form" action="thankyou.html" method="post">
+      <span>
+    <h2>Join our newsletter!</h2>
+    <p>Subscribe for the latest updates, special deals, and skincare tips straight to your inbox!</p>
+    <form class="newsletter-form">
+      <div class="name-container">
+        <div class="input-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required autocomplete="name" placeholder="Enter your name">
+          
         </div>
+        </div>
+       
 
-    </div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required autocomplete="email" placeholder="Enter your email address">
+      <span id="emailError" class="error"></span><br><br>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required><br><br>
+
+      
+      <button onclick="submitForm()">Sign Up</button>
+    </form>
+
+    <p class="privacy-text">No spam, unsubscribe anytime.</p>
+  </span>
+    </form>
+</div>
+
 
 </form>
+<div class="top">
+    <a href="#top">Back to Top</a>
+  </div>
+  
+    <footer> 
+      <span>Made with ... </span>
+      &copy; 2025 Chloe Chin
+  </footer>
 
 <script src="script.js"></script>
