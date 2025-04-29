@@ -1,119 +1,53 @@
-<!doctype html>
-
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Nature's Skin</title>
-  <meta name="description" content="A website about natural skincare products.">
-  <meta name="author" content="Chloe Chin">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" href="css/normalize.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chloe Chin Portfolio</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
-
-<body id="top">
-
+<body>
   <header class="header">
-    <button class="menu-toggle" aria-expanded="false" aria-controls="offcanvas-menu">
-      <span class="hamburger"></span>
-  </button>  
-    <nav id="offcanvas-menu" class="menu">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="bestsellers.html">Bestsellers</a>
-        <a href="resources.html">Skincare</a>
-        <a href="resources.html">Hair + Body</a>
-        <a href="contact.html">Join our newsletter!</a>
-
-
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-<div class="container">
+  <section class="hero">
+    <h1>Chloe Chin</h1>
+    <p>UX Designer & Digital Artist</p>
+  </section>
 
-  <div class="parallax">
-    <div class="logo"><h1>Nature's Skin</h1></div>
-  </div>
-
-
-
-  <div class="hero">
-    <h2>Welcome to Nature's Skin</h2>
-    <p>Discover the benefits of natural skincare products and how they can help you achieve healthy, radiant skin. Our products are made with natural ingredients that are gentle on the skin and free of harmful chemicals. Explore our range of skincare products and find the perfect solution for your skin type.</p>
-  </div>
-
-  <div class="cream-doctor-flex-row">
-
-    <div class="cream-flex-row-item-1"> 
-      <div class="cream-content">
-        <h2>Bestseller Creams</h2>
-        <p>Check out the creams everyone loves!</p>
-        <a href="bestsellers.html" class="button">
-        <img src="./img/bestsellers.jpg" alt="Image of cream swatches">
-      </a>
-      </div>
+  <section class="portfolio">
+    <div class="portfolio-grid">
+      <a href="project1.html"><img src="img/placeholder1.jpg" alt="Project 1"><h3>Project 1 Title</h3></a>
+      <a href="project2.html"><img src="img/placeholder2.jpg" alt="Project 2"><h3>Project 2 Title</h3></a>
+      <a href="project3.html"><img src="img/placeholder3.jpg" alt="Project 3"><h3>Project 3 Title</h3></a>
+      <a href="project4.html"><img src="img/placeholder4.jpg" alt="Project 4"><h3>Project 4 Title</h3></a>
+      <a href="project5.html"><img src="img/placeholder5.jpg" alt="Project 5"><h3>Project 5 Title</h3></a>
+      <a href="project6.html"><img src="img/placeholder6.jpg" alt="Project 6"><h3>Project 6 Title</h3></a>
+      <a href="project7.html"><img src="img/placeholder7.jpg" alt="Project 7"><h3>Project 7 Title</h3></a>
+      <a href="project8.html"><img src="img/placeholder8.jpg" alt="Project 8"><h3>Project 8 Title</h3></a>
+      <a href="project9.html"><img src="img/placeholder9.jpg" alt="Project 9"><h3>Project 9 Title</h3></a>
     </div>
+  </section>
 
-  
-    <div class="doctor-flex-row-item-2">
-      <div class="doctor-content">
-          <h2>Meet Dr.Smith</h2>
-          <img src="./img/giz2.jpg" alt="Image of Dr.Smith">
-          <p class="image-description">
-            Dr. John Smith is a dermatologist who has been practicing for over 20 years. He is passionate about natural skincare and has been researching the benefits of natural ingredients for the skin. Dr. Smith has created a line of skincare products that are made with natural ingredients and are free of harmful chemicals. His products are designed to nourish and protect the skin, leaving it looking healthy and radiant.
-          </p>
-      </div>
-  </div>
-  
-  </div>
- 
-     
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I am a digital artist passionate about creating seamless and intuitive user experiences. Combining creativity with technical skills, I explore the connection between technology and human interaction.</p>
+  </section>
 
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email me at: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+  </section>
 
-  </div>
-
-  <div class="newsletter-container">
-    <form class="newsletter-form" action="thankyou.html" method="post">
-      <span>
-    <h2>Join our newsletter!</h2>
-    <p>Subscribe for the latest updates, special deals, and skincare tips straight to your inbox!</p>
-    <form class="newsletter-form">
-      <div class="name-container">
-        <div class="input-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required autocomplete="name" placeholder="Enter your name">
-          
-        </div>
-        </div>
-       
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required autocomplete="email" placeholder="Enter your email address">
-      <span id="emailError" class="error"></span><br><br>
-
-      <label for="dob">Date of Birth:</label>
-      <input type="date" id="dob" name="dob" required><br><br>
-
-      
-      <button onclick="submitForm()">Sign Up</button>
-    </form>
-
-    <p class="privacy-text">No spam, unsubscribe anytime.</p>
-  </span>
-    </form>
-</div>
-
-
-<div class="top">
-  <a href="#top">Back to Top</a>
-</div>
-
-  <footer> 
-    <span>Made with ... </span>
+  <footer>
     &copy; 2025 Chloe Chin
-</footer>
+  </footer>
 
-    <script src="js/main.js"></script>
-
+  <script src="js/main.js"></script>
 </body>
 </html>
