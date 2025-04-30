@@ -87,9 +87,10 @@ body {
   
   .wave {
     display: inline-block;
-    animation: wave-hand 2s ease-in-out 1;
+    animation: wave-hand 2s ease-in-out infinite;
     transform-origin: 70% 70%;
   }
+  
   
   @keyframes wave-hand {
     0% { transform: rotate(0deg); }
