@@ -590,3 +590,22 @@
     border-color: #fff transparent transparent;
   }
   
+  .back-to-top {
+    display: block;
+    text-align: center;
+    margin: 60px auto 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #003366;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .back-to-top:hover {
+    color: #0077ff;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
