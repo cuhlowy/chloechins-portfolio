@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome Page</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/welcome.css" />
+</head>
+
+
+
+
+<body>
+    <h1>Hi, I'm <span>Chloe Chin</span>!</h1>
+    <p class="typing-line">I am a <span class="typing" id="typed-text"></span></p>
+
+    <p class="intro">
+        I'm a Digital Art major with a minor in Computer Science and Digital Media and Engineering at LSU. With a background in Computer Science, I'm passionate about blending technical expertise with creativity to craft interactive media experiences. I'm eager to explore innovative ways to merge coding, design, and storytelling to bring digital art to life!
+      </p>
+      
+
+  <div class="welcome-buttons">
+    <a href="index.html">Portfolio</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="resume.html">Resume</a>
+  </div>
+
+  <script>
+    const phrases = ["UX Designer", "Creative Coder", "Digital Artist", "Problem Solver"];
+    const el = document.getElementById("typed-text");
+    let index = 0;
+    let char = 0;
+    let typing = true;
+
+    function typeLoop() {
+      if (typing) {
+        if (char < phrases[index].length) {
+          el.textContent += phrases[index].charAt(char);
+          char++;
+          setTimeout(typeLoop, 100);
+        } else {
+          typing = false;
+          setTimeout(typeLoop, 1000);
+        }
+      } else {
+        if (char > 0) {
+          el.textContent = phrases[index].substring(0, char - 1);
+          char--;
+          setTimeout(typeLoop, 50);
+        } else {
+          typing = true;
+          index = (index + 1) % phrases.length;
+          setTimeout(typeLoop, 300);
+        }
+      }
+    }
+
+    typeLoop();
+  </script>
+</body>
+</html>

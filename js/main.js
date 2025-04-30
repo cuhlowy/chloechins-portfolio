@@ -37,3 +37,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".filter-buttons button");
+    const projects = document.querySelectorAll(".portfolio-grid a");
+  
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const filter = button.getAttribute("data-filter");
+  
+        buttons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+  
+        projects.forEach(project => {
+          const category = project.getAttribute("data-category");
+  
+          if (filter === "all" || category === filter) {
+            project.style.display = "block";
+          } else {
+            project.style.display = "none";
+          }
+        });
+      });
+    });
+  });
+  

@@ -1,0 +1,135 @@
+.resume-header {
+  background: #eef6ff;
+  padding: 60px 20px 40px;
+  text-align: center;
+}
+
+.resume-header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #0077ff;
+  margin-bottom: 10px;
+}
+
+.resume-header p {
+  font-size: 18px;
+  color: #444;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.download-resume {
+  display: inline-block;
+  margin: 30px auto;
+  padding: 10px 20px;
+  border: 2px solid #0077ff;
+  color: #0077ff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.download-resume:hover {
+  background-color: #0077ff;
+  color: white;
+}
+
+.container {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.resume-section {
+  margin-bottom: 50px;
+}
+
+.resume-section h2 {
+  font-size: 24px;
+  color: #0077ff;
+  border-left: 4px solid #0077ff;
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+
+.resume-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 20px 0;
+  flex-wrap: wrap;
+  transition: background-color 0.3s ease;
+  border-radius: 6px;
+}
+
+.resume-row:hover {
+  background-color: #f7fbff;
+}
+
+.resume-left h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  margin: 0 0 6px;
+}
+
+.resume-left p {
+  font-size: 15px;
+  margin: 4px 0;
+  color: #555;
+}
+
+.resume-right {
+  min-width: 120px;
+  text-align: right;
+}
+
+.resume-right p {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+}
+
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.two-column ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+  color: #444;
+}
+
+.two-column li {
+  margin-bottom: 6px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  color: #aaa;
+  border-top: 1px solid #eee;
+  margin-top: 60px;
+}
+
+@media (max-width: 600px) {
+  .resume-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resume-right {
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  .two-column {
+    flex-direction: column;
+  }
+}
