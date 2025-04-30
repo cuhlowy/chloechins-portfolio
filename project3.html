@@ -1,56 +1,52 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="icon" href="img/favicon-32-tight.png" type="image/png" sizes="32x32">
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pattern with Code - Chloe Chin</title>
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/normalize.css">
-
-</head>
-<body>
-  <header class="header">
-    <div class="nav-container">
-      <a href="index.html" class="logo">
-        <img src="img/logo.png" alt="Chloe Chin Logo">
-      </a>      
-      <button class="menu-toggle" aria-label="Toggle menu">
-        <span class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-      </button>
-      
-      <nav class="nav-links" aria-label="Main navigation">
-        <!-- <a href="index.html">Home</a> -->
-        <a href="portfolio.html">Portfolio</a>
-        <a href="about.html">About</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-  
-
-  <section class="project-detail">
-    <div class="project-container">
-      <div class="project-image">
-        <!-- Generative Sketch -->
-        <div id="pattern-sketch-container"></div>
+  <head>
+    <link rel="icon" href="img/favicon-32-tight.png" type="image/png" sizes="32x32">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern with Code - Chloe Chin</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/normalize.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <img src="img/logo.png" alt="Chloe Chin Logo">
+        </a>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+        <nav class="nav-links" aria-label="Main navigation">
+          <!-- <a href="index.html">Home</a> -->
+          <a href="portfolio.html">Portfolio</a>
+          <a href="about.html">About</a>
+          <a href="resume.html">Resume</a>
+          <a href="contact.html">Contact</a>
+        </nav>
       </div>
-      <div class="project-text">
-        <h1>Generative Pattern with Code</h1>
-        <h2><-Click there!</h2>
-        <p>This project explores generative design through iterative code written in p5.js. The result is a dynamic, repeating pattern composed of geometric shapes arranged with mathematical precision. Using a limited palette of red, green, and yellow, the design balances structure and randomness, reflecting both visual rhythm and creative coding experimentation.</p>
+    </header>
+    <section class="project-detail">
+      <div class="project-container">
+        <div class="project-image">
+          <!-- Generative Sketch -->
+          <div id="pattern-sketch-container"></div>
+        </div>
+        <div class="project-text">
+          <h1>Generative Pattern with Code</h1>
+          <h2>
+            <-Click there! </h2>
+              <p>This project explores generative design through iterative code written in p5.js. The result is a dynamic, repeating pattern composed of geometric shapes arranged with mathematical precision. Using a limited palette of red, green, and yellow, the design balances structure and randomness, reflecting both visual rhythm and creative coding experimentation.</p>
+        </div>
       </div>
-    </div>
-
-    <h3>Code</h3>
-<pre class="code-block">
-<code>
+      <h3>Code</h3>
+      <pre class="code-block">
+										<code>
 let sketch = (p) => {
   let colors;
 
@@ -140,21 +136,15 @@ let sketch = (p) => {
 };
 
 new p5(sketch);
-</code>
-</pre>
 
-  
-    <a href="portfolio.html" class="back-link">&larr; Back to Portfolio</a>
-  </section>
-  
-
-  <footer>
-    &copy; 2025 Chloe Chin
-  </footer>
-  <script src="js/main.js"></script>
-<!-- Load p5.js and your sketch -->
-<script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.min.js"></script>
-<script src="js/pattern-with-code.js"></script>
-
-</body>
+										</code>
+									</pre>
+      <a href="portfolio.html" class="back-link">&larr; Back to Portfolio</a>
+    </section>
+    <footer> &copy; 2025 Chloe Chin </footer>
+    <script src="js/main.js"></script>
+    <!-- Load p5.js and your sketch -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.min.js"></script>
+    <script src="js/pattern-with-code.js"></script>
+  </body>
 </html>

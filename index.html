@@ -1,35 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <link rel="icon" href="img/favicon-32-tight.png" type="image/png" sizes="32x32">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome Page</title>
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/index.css" />
-</head>
-
-
-
-
-<body>
-  <main id="main-content">
-    <h1>Hi, I'm <span>Chloe Chin</span> <span class="wave">👋</span></h1>
-    <h2 class="typing-line">I am a<span class="typing" id="typed-text"></span></h2>
-
-    <p class="intro">
-      I'm a Digital Art major with a minor in Computer Science and Digital Media and Engineering at LSU.
-    </p>
-
-    <div class="welcome-buttons" role="navigation" aria-label="Main navigation">
-      <a href="portfolio.html">Portfolio</a>
-      <a href="about.html">About</a>
-      <a href="resume.html">Resume</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </main>
-</body>
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <main id="main-content">
+      <h1>Hi, I'm <span>Chloe Chin</span>
+        <span class="wave">👋</span>
+      </h1>
+      <h2 class="typing-line">I am a<span class="typing" id="typed-text"></span>
+      </h2>
+      <p class="intro"> I'm a Digital Art major with a minor in Computer Science and Digital Media and Engineering at LSU. </p>
+      <div class="welcome-buttons" role="navigation" aria-label="Main navigation">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </main>
+  </body>
   <script>
     const phrases = ["n Illustrator", " Creative Coder", " Digital Artist", " Problem Solver"];
     const el = document.getElementById("typed-text");
@@ -59,8 +53,6 @@
         }
       }
     }
-
     typeLoop();
   </script>
-
 </html>

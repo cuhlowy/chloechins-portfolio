@@ -1,104 +1,123 @@
 body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: #f9f9f9;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-  }
-  
-  h1 {
-    font-size: 48px;
-    font-weight: 400;
-    margin-bottom: 10px;
-  }
-  
-  h1 span {
-    font-weight: 700;
-    color: #003366;
-  }
-  
-  .typing {
-    font-size: 24px;
-    color: #003366;
-    height: 30px;
-    margin-bottom: 40px;
-  }
+	margin: 0;
+	font-family: 'Inter', sans-serif;
+	background-color: #f9f9f9;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+}
 
-  .typing-line {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 40px;
-  }
-  
-  .typing-line .typing {
-    color: #003366;
-    font-weight: 600;
-  }
-  
-  .intro {
-    max-width: 700px;
-    font-size: 18px;
-    color: #444;
-    margin: 0 auto 40px;
-    line-height: 1.6;
-    padding: 0 20px;
-  }
-  
-  
-  .welcome-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 30px;
-    padding: 0 20px;
-  }
-  
-  .welcome-buttons a {
-    flex: 1 1 180px;
-    max-width: 220px;
-    min-width: 140px;
-    text-align: center;
-    text-decoration: none;
-    color: #003366;
-    border: 2px solid #003366;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 18px;
-    transition: all 0.3s ease;
-  }
-  
-  .welcome-buttons a:hover {
-    background-color: #003366;
-    color: white;
-  }
-  
-  /* Optional: slight spacing on smaller screens */
-  @media (max-width: 480px) {
-    .welcome-buttons a {
-      flex: 1 1 100%;
-      max-width: none;
-    }
-  }
-  
-  .wave {
-    display: inline-block;
-    animation: wave-hand 2s ease-in-out infinite;
-    transform-origin: 70% 70%;
-  }
-  
-  
-  @keyframes wave-hand {
-    0% { transform: rotate(0deg); }
-    15% { transform: rotate(20deg); }
-    30% { transform: rotate(-10deg); }
-    45% { transform: rotate(20deg); }
-    60% { transform: rotate(-5deg); }
-    75% { transform: rotate(10deg); }
-    100% { transform: rotate(0deg); }
-  }
-  
+h1 {
+	font-size: 48px;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+h1 span {
+	font-weight: 700;
+	color: #003366;
+}
+
+.typing {
+	font-size: 24px;
+	color: #003366;
+	height: 30px;
+	margin-bottom: 40px;
+}
+
+.typing-line {
+	font-size: 24px;
+	color: #333;
+	margin-bottom: 40px;
+}
+
+.typing-line .typing {
+	color: #003366;
+	font-weight: 600;
+}
+
+.intro {
+	max-width: 700px;
+	font-size: 18px;
+	color: #444;
+	margin: 0 auto 40px;
+	line-height: 1.6;
+	padding: 0 20px;
+}
+
+
+.welcome-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 16px;
+	margin-top: 30px;
+	padding: 0 20px;
+}
+
+.welcome-buttons a {
+	flex: 1 1 180px;
+	max-width: 220px;
+	min-width: 140px;
+	text-align: center;
+	text-decoration: none;
+	color: #003366;
+	border: 2px solid #003366;
+	padding: 12px 20px;
+	border-radius: 8px;
+	font-size: 18px;
+	transition: all 0.3s ease;
+}
+
+.welcome-buttons a:hover {
+	background-color: #003366;
+	color: white;
+}
+
+/* Optional: slight spacing on smaller screens */
+@media (max-width: 480px) {
+	.welcome-buttons a {
+		flex: 1 1 100%;
+		max-width: none;
+	}
+}
+
+.wave {
+	display: inline-block;
+	animation: wave-hand 2s ease-in-out infinite;
+	transform-origin: 70% 70%;
+}
+
+
+@keyframes wave-hand {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	15% {
+		transform: rotate(20deg);
+	}
+
+	30% {
+		transform: rotate(-10deg);
+	}
+
+	45% {
+		transform: rotate(20deg);
+	}
+
+	60% {
+		transform: rotate(-5deg);
+	}
+
+	75% {
+		transform: rotate(10deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}
