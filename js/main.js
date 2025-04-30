@@ -62,3 +62,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
+  const phrases = [
+    "Hi! 👋",
+    "Nice to meet you!",
+    "I'm Chloe ✨",
+    "Let's make something cool!",
+    "I love cats 🐱",
+    "Welcome to my portfolio!"
+  ];
+  
+  document.getElementById("about-img").addEventListener("click", function () {
+    const bubble = document.getElementById("speech-bubble");
+    const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+  
+    bubble.textContent = randomPhrase;
+    bubble.style.display = "block";
+  
+    clearTimeout(bubble.timeout); // prevent overlapping timers
+    bubble.timeout = setTimeout(() => {
+      bubble.style.display = "none";
+    }, 2500);
+  });
+  
+  

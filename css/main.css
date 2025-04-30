@@ -221,6 +221,21 @@
     line-height: 1.4;
     margin: 10px 0 0;
   }
+
+  .code-block {
+  background: #f4f4f4;
+  color: #333;
+  padding: 12px 16px;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  white-space: pre-wrap;
+  line-height: 1.4;
+  margin-top: 30px;
+  max-height: 400px;
+}
+
   
   
   /* About Section */
@@ -530,3 +545,48 @@
   
 
  
+  .about-image img {
+    transition: transform 0.3s ease;
+  }
+  
+  .about-image img:hover {
+    transform: rotate(-2deg) scale(1.05);
+  }
+  
+  .about-image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .about-image {
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .speech-bubble {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border: 2px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    white-space: nowrap;
+    display: none;
+    z-index: 10;
+  }
+  
+  .speech-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px 10px 0;
+    border-style: solid;
+    border-color: #fff transparent transparent;
+  }
+  
