@@ -7,7 +7,7 @@
 .resume-header h1 {
   font-size: 48px;
   font-weight: 700;
-  color: #0055cc;
+  color: #003366;
   margin-bottom: 10px;
 }
 
@@ -22,8 +22,8 @@
   display: inline-block;
   margin: 30px auto;
   padding: 10px 20px;
-  border: 2px solid #0055cc;
-  color: #0055cc;
+  border: 2px solid #003366;
+  color: #003366;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
@@ -31,7 +31,7 @@
 }
 
 .download-resume:hover {
-  background-color: #0055cc;
+  background-color: #003366;
   color: white;
 }
 
@@ -47,8 +47,8 @@
 
 .resume-section h2 {
   font-size: 24px;
-  color: #0055cc;
-  border-left: 4px solid #0055cc;
+  color: #003366;
+  border-left: 4px solid #003366;
   padding-left: 12px;
   margin-bottom: 20px;
 }
