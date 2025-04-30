@@ -49,12 +49,24 @@ body {
   }
   
   
+  .welcome-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 30px;
+    padding: 0 20px;
+  }
+  
   .welcome-buttons a {
+    flex: 1 1 180px;
+    max-width: 220px;
+    min-width: 140px;
+    text-align: center;
     text-decoration: none;
     color: #0077ff;
     border: 2px solid #0077ff;
-    padding: 12px 24px;
-    margin: 10px;
+    padding: 12px 20px;
     border-radius: 8px;
     font-size: 18px;
     transition: all 0.3s ease;
@@ -64,3 +76,28 @@ body {
     background-color: #0077ff;
     color: white;
   }
+  
+  /* Optional: slight spacing on smaller screens */
+  @media (max-width: 480px) {
+    .welcome-buttons a {
+      flex: 1 1 100%;
+      max-width: none;
+    }
+  }
+  
+  .wave {
+    display: inline-block;
+    animation: wave-hand 2s ease-in-out 1;
+    transform-origin: 70% 70%;
+  }
+  
+  @keyframes wave-hand {
+    0% { transform: rotate(0deg); }
+    15% { transform: rotate(20deg); }
+    30% { transform: rotate(-10deg); }
+    45% { transform: rotate(20deg); }
+    60% { transform: rotate(-5deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+  }
+  
