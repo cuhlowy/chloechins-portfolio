@@ -18,12 +18,12 @@ body {
   
   h1 span {
     font-weight: 700;
-    color: #0076dc;
+    color: #0055cc;
   }
   
   .typing {
     font-size: 24px;
-    color: #0076dc;
+    color: #0055cc;
     height: 30px;
     margin-bottom: 40px;
   }
@@ -35,7 +35,7 @@ body {
   }
   
   .typing-line .typing {
-    color: #0076dc;
+    color: #0055cc;
     font-weight: 600;
   }
   
@@ -64,8 +64,8 @@ body {
     min-width: 140px;
     text-align: center;
     text-decoration: none;
-    color: #0076dc;
-    border: 2px solid #0076dc;
+    color: #0055cc;
+    border: 2px solid #0055cc;
     padding: 12px 20px;
     border-radius: 8px;
     font-size: 18px;
@@ -73,7 +73,7 @@ body {
   }
   
   .welcome-buttons a:hover {
-    background-color: #0076dc;
+    background-color: #0055cc;
     color: white;
   }
   
