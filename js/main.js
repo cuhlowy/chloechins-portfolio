@@ -107,3 +107,33 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById('pdfViewer').src = "";
     }
   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("pdfModal");
+    const viewer = document.getElementById("pdfViewer");
+    const closeBtn = document.querySelector(".close-modal");
+    const pdfLinks = document.querySelectorAll(".open-pdf");
+  
+    if (!modal || !viewer || !closeBtn || pdfLinks.length === 0) return;
+  
+    pdfLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const pdfUrl = this.getAttribute("href");
+        viewer.src = pdfUrl;
+        modal.style.display = "block";
+      });
+    });
+  
+    closeBtn.addEventListener("click", function () {
+      modal.style.display = "none";
+      viewer.src = "";
+    });
+  
+    window.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        modal.style.display = "none";
+        viewer.src = "";
+      }
+    });
+  });

@@ -640,3 +640,17 @@ html {
 	color: white;
 	cursor: pointer;
   }
+
+  .download-resume {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 12px 24px;
+	text-decoration: none;
+	border-radius: 999px;
+  }
+
+  .project-text {
+	text-align: center;
+	max-width: 700px;
+	margin: 0 auto;
+  }
