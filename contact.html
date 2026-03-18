@@ -1,56 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="icon" href="img/favicon-32-tight.png" type="image/png" sizes="32x32">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Chloe Chin</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/normalize.css">
-  </head>
-  <body>
-    <header class="header">
-      <div class="nav-container">
-        <a href="index.html" class="logo">
-          <img src="img/logo.png" alt="Chloe Chin Logo">
-        </a>
-        <button class="menu-toggle" aria-label="Toggle menu">
-          <span class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </span>
-        </button>
-        <nav class="nav-links" aria-label="Main navigation">
-          <!-- <a href="index.html">Home</a> -->
-          <a href="portfolio.html">Portfolio</a>
-          <a href="about.html">About</a>
-          <a href="resume.html">Resume</a>
-          <a href="contact.html">Contact</a>
-        </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact – Chloe Chin</title>
+
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+
+<body id="top">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Chloe Chin Logo">
+      </a>
+
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+
+      <nav class="nav-links">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-container">
+    <h1>Let’s Connect</h1>
+    <p>Feel free to reach out — I’m always open to opportunities, collaborations, or just a chat.</p>
+
+    <div class="contact-card">
+
+      <!-- EMAIL -->
+      <div class="contact-item">
+        <h3>Email</h3>
+        <a href="mailto:chin1604.cc@email.com">chin1604.cc@email.com</a>
       </div>
-    </header>
-    <section class="contact">
-      <div class="contact-container">
-        <h1>Contact Me</h1>
-        <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
-          <div class="input-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required placeholder="Your name">
-          </div>
-          <div class="input-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="_replyto" required placeholder="Your email">
-          </div>
-          <div class="input-group">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required placeholder="Your message"></textarea>
-          </div>
-          <button type="submit">Send</button>
-        </form>
+
+      <!-- PHONE -->
+      <div class="contact-item">
+        <h3>Phone</h3>
+        <a href="tel:+12251234567">+1 (504) 330-1770</a>
       </div>
-    </section>
-    <footer> &copy; 2025 Chloe Chin </footer>
-    <script src="js/main.js"></script>
-  </body>
+
+      <!-- SOCIAL LINKS -->
+      <div class="contact-item">
+        <h3>Social</h3>
+        <ul class="social-links">
+          <li><a href="https://www.linkedin.com/in/chloe-chin-05b847275/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/cuhlowy/" target="_blank">Instagram</a></li>
+          <li><a href="https://github.com/cuhlowy" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="#top" class="back-to-top">⬆ Back to Top</a>
+    &copy; 2025 Chloe Chin
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
 </html>
