@@ -610,3 +610,33 @@ footer {
 html {
 	scroll-behavior: smooth;
 }
+
+
+.pdf-modal {
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.85);
+  }
+  
+  .pdf-modal iframe {
+	width: 80%;
+	height: 85%;
+	margin: 5% auto;
+	display: block;
+	background: white;
+	border-radius: 10px;
+  }
+  
+  .close-modal {
+	position: absolute;
+	top: 20px;
+	right: 40px;
+	font-size: 40px;
+	color: white;
+	cursor: pointer;
+  }

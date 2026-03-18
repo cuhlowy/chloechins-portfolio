@@ -84,4 +84,26 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 2500);
   });
   
+  document.querySelectorAll('.open-pdf').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
   
+      const pdfUrl = this.getAttribute('href');
+      document.getElementById('pdfViewer').src = pdfUrl;
+      document.getElementById('pdfModal').style.display = 'block';
+    });
+  });
+  
+  document.querySelector('.close-modal').addEventListener('click', function() {
+    document.getElementById('pdfModal').style.display = 'none';
+    document.getElementById('pdfViewer').src = "";
+  });
+  
+  // close when clicking outside
+  window.addEventListener('click', function(e) {
+    const modal = document.getElementById('pdfModal');
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      document.getElementById('pdfViewer').src = "";
+    }
+  });
