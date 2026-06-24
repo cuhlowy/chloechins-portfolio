@@ -8,6 +8,40 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/resume.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <style>
+      .project-intro {
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 60px auto;
+        padding: 0 40px;
+      }
+      .project-intro .project-text {
+        flex: 1;
+        min-width: 280px;
+      }
+      .project-pdf-panel {
+        flex: 1;
+        min-width: 300px;
+      }
+      .project-pdf-panel iframe {
+        width: 100%;
+        height: 650px;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+      @media (max-width: 768px) {
+        .project-intro {
+          flex-direction: column;
+          padding: 0 20px;
+        }
+        .project-pdf-panel iframe {
+          height: 450px;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="header">
@@ -31,17 +65,22 @@
         </nav>
       </div>
     </header>
-    <div class="project-text">
+    <div class="project-intro">
+      <div class="project-text">
         <h1>Case Closed</h1>
         <p>Case Closed is an interactive investigative experience that blends storytelling with user-centered design. The project challenges users to engage with a digital crime scene by analyzing clues, interpreting visual information, and making connections to solve a narrative-driven mystery.
 
-          Designed with a focus on usability and engagement, the experience emphasizes intuitive interaction, clear visual hierarchy, and progressive information discovery. Through this project, I explored how interface design and narrative structure can work together to guide user behavior, encourage critical thinking, and create a sense of immersion..</p>
-      
-          <a href="Case Closed_ CSC 4243 Final Product - Google Docs.pdf" 
-          class="download-resume open-pdf">
-         📄 View Case Study
-       </a>
+          Designed with a focus on usability and engagement, the experience emphasizes intuitive interaction, clear visual hierarchy, and progressive information discovery. Through this project, I explored how interface design and narrative structure can work together to guide user behavior, encourage critical thinking, and create a sense of immersion.</p>
+
+          <a href="Case Closed_ CSC 4243 Final Product - Google Docs.pdf"
+          class="download-resume" target="_blank" rel="noopener noreferrer">
+          📄 View Case Study
+        </a>
       </div>
+      <div class="project-pdf-panel">
+        <iframe src="Case Closed_ CSC 4243 Final Product - Google Docs.pdf" title="Case Closed Case Study"></iframe>
+      </div>
+    </div>
     <section class="project-detail">
       <div class="project-container">
         <div class="project-image">
