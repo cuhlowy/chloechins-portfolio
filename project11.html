@@ -8,6 +8,225 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/resume.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <style>
+      .cs-page {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 32px 80px;
+      }
+
+      /* Hero */
+      .cs-hero {
+        position: relative;
+        width: 100%;
+        max-height: 520px;
+        overflow: hidden;
+        margin-bottom: 64px;
+      }
+      .cs-hero img {
+        width: 100%;
+        height: 520px;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+      }
+      .cs-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.75) 40%, rgba(0,0,0,0.1) 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 40px 48px;
+      }
+      .cs-hero-overlay h1 {
+        color: #fff;
+        font-size: 52px;
+        margin: 0 0 8px;
+      }
+      .cs-hero-overlay p {
+        color: rgba(255,255,255,0.85);
+        font-size: 18px;
+        margin: 0 0 24px;
+      }
+      .cs-hero-buttons {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .cs-hero-buttons a {
+        padding: 10px 22px;
+        border-radius: 6px;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: opacity 0.2s;
+      }
+      .cs-hero-buttons a:hover { opacity: 0.85; }
+      .btn-primary {
+        background: #fff;
+        color: #111;
+      }
+      .btn-secondary {
+        background: transparent;
+        color: #fff;
+        border: 2px solid rgba(255,255,255,0.7);
+      }
+
+      /* Sections */
+      .cs-section {
+        margin-bottom: 64px;
+      }
+      .cs-section h2 {
+        font-size: 13px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #888;
+        margin: 0 0 12px;
+      }
+      .cs-section h3 {
+        font-size: 28px;
+        margin: 0 0 16px;
+        color: #111;
+      }
+      .cs-section p {
+        font-size: 17px;
+        line-height: 1.75;
+        color: #333;
+        margin: 0 0 16px;
+      }
+      .cs-section ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+      .cs-section ul li {
+        font-size: 17px;
+        line-height: 1.75;
+        color: #333;
+        margin-bottom: 6px;
+      }
+
+      /* My Role highlight */
+      .cs-role {
+        background: #f7f5ff;
+        border-left: 4px solid #7c5cbf;
+        border-radius: 8px;
+        padding: 28px 32px;
+      }
+      .cs-role h3 { margin-top: 0; }
+
+      /* Research stats */
+      .cs-stats {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+      .cs-stat {
+        flex: 1;
+        min-width: 180px;
+        background: #f4f4f4;
+        border-radius: 10px;
+        padding: 20px 24px;
+        text-align: center;
+      }
+      .cs-stat .stat-number {
+        font-size: 36px;
+        font-weight: 700;
+        color: #7c5cbf;
+        display: block;
+      }
+      .cs-stat .stat-label {
+        font-size: 14px;
+        color: #555;
+        margin-top: 4px;
+        display: block;
+      }
+
+      /* Image grids */
+      .cs-image-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 16px;
+        margin-top: 20px;
+      }
+      .cs-image-grid img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        cursor: pointer;
+      }
+      .cs-image-grid img:hover {
+        transform: scale(1.02);
+        transition: transform 0.2s;
+      }
+
+      /* Placeholder asset slots */
+      .cs-placeholder {
+        background: #f4f4f4;
+        border: 2px dashed #ccc;
+        border-radius: 8px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #aaa;
+        font-size: 14px;
+        margin-top: 20px;
+      }
+
+      /* Final game */
+      .cs-play-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #7c5cbf;
+        color: #fff;
+        text-decoration: none;
+        padding: 14px 28px;
+        border-radius: 8px;
+        font-size: 17px;
+        font-weight: 600;
+        margin-top: 24px;
+        transition: background 0.2s;
+      }
+      .cs-play-cta:hover { background: #6448a8; }
+
+      /* Case study PDF */
+      .cs-pdf-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 2px solid #7c5cbf;
+        color: #7c5cbf;
+        text-decoration: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 16px;
+        transition: background 0.2s, color 0.2s;
+      }
+      .cs-pdf-link:hover {
+        background: #7c5cbf;
+        color: #fff;
+      }
+
+      /* Divider */
+      .cs-divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 0 0 64px;
+      }
+
+      @media (max-width: 640px) {
+        .cs-hero img { height: 340px; }
+        .cs-hero-overlay { padding: 24px; }
+        .cs-hero-overlay h1 { font-size: 34px; }
+        .cs-image-grid { grid-template-columns: 1fr; }
+        .cs-stats { flex-direction: column; }
+      }
+    </style>
   </head>
   <body>
     <header class="header">
@@ -23,7 +242,6 @@
           </span>
         </button>
         <nav class="nav-links" aria-label="Main navigation">
-          <!-- <a href="index.html">Home</a> -->
           <a href="portfolio.html">Portfolio</a>
           <a href="about.html">About</a>
           <a href="resume.html">Resume</a>
@@ -31,37 +249,150 @@
         </nav>
       </div>
     </header>
-    <div class="project-text">
-      <h1>Magidemia</h1>
-      <p>Many struggle to understand the reality of ADHD and dyslexia, as traditional explanations often fail to build true empathy. Magidemia bridges this gap through an interactive web game that simulates these learning disabilities. By experiencing these challenges firsthand in an immersive environment, players gain a deeper, more personal understanding than passive learning could ever provide.</p>
 
-      <a href="img/Poster-Template-V.pdf.pdf"
-         class="download-resume" target="_blank" rel="noopener noreferrer">
-        📄 View Case Study
-      </a>
-      <a href="https://4859-project.vercel.app/gameplay/dashboard"
-         class="download-resume" target="_blank" rel="noopener noreferrer">
-        🎮 Play Magidemia
-      </a>
-    </div>
-    <section class="project-detail">
-      <div class="project-container">
-        <div class="project-image">
-          <img src="img/mainmenu1.png" alt="Magidemia main menu with pixel art castle at sunset" class="popup-image">
-        </div>
-        <div class="project-image">
-          <img src="img/potionsPic1.png" alt="Potion Lab mini-game gameplay screen" class="popup-image">
-        </div>
-        <div class="project-image">
-          <img src="img/spellingPic1.2.png" alt="Spell Trial mini-game gameplay screen" class="popup-image">
-        </div>
-        <div class="project-image">
-          <img src="img/epiloguePic1.png" alt="Session complete epilogue screen showing results" class="popup-image">
+    <!-- HERO -->
+    <div class="cs-hero">
+      <img src="img/mainmenu1.png" alt="Magidemia main menu — pixel art castle at sunset">
+      <div class="cs-hero-overlay">
+        <h1>Magidemia</h1>
+        <p>Challenge misconceptions about learning disabilities.</p>
+        <div class="cs-hero-buttons">
+          <a href="https://4859-project.vercel.app/gameplay/dashboard" target="_blank" rel="noopener noreferrer" class="btn-primary">🎮 Play Magidemia</a>
+          <a href="img/Poster-Template-V.pdf.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary">📄 View Case Study</a>
         </div>
       </div>
+    </div>
+
+    <div class="cs-page">
+
+      <!-- THE CHALLENGE -->
+      <section class="cs-section">
+        <h2>The Challenge</h2>
+        <h3>Building empathy through experience</h3>
+        <p>Many people struggle to understand the daily experiences of individuals with ADHD and dyslexia. The goal of Magidemia was to create an engaging experience that encourages empathy through gameplay rather than explanation alone.</p>
+      </section>
+
+      <hr class="cs-divider">
+
+      <!-- THE GOAL -->
+      <section class="cs-section">
+        <h2>The Goal</h2>
+        <h3>What we set out to do</h3>
+        <ul>
+          <li>Increase awareness of learning disabilities.</li>
+          <li>Create an accessible educational experience.</li>
+          <li>Use gameplay mechanics to simulate real challenges.</li>
+          <li>Make learning engaging and approachable.</li>
+        </ul>
+      </section>
+
+      <hr class="cs-divider">
+
+      <!-- MY ROLE -->
+      <section class="cs-section">
+        <h2>My Role</h2>
+        <h3>What I contributed</h3>
+          <ul>
+            <li>Created all character sprites and animations.</li>
+            <li>Developed the game's visual identity and art direction.</li>
+            <li>Designed the user interface and menus.</li>
+            <li>Contributed to gameplay design and player experience.</li>
+            <li>Collaborated on development and implementation.</li>
+          </ul>
+      </section>
+
+      <hr class="cs-divider">
+
+      <!-- RESEARCH & INSPIRATION -->
+      <section class="cs-section">
+        <h2>Research &amp; Inspiration</h2>
+        <h3>Understanding the problem space</h3>
+        <p>We grounded the project in research on ADHD and dyslexia to understand how these conditions affect learning, attention, and information processing. Educational games and accessibility-first design served as key inspiration for how we structured the gameplay experience.</p>
+        <div class="cs-stats">
+          <div class="cs-stat">
+            <span class="stat-number">1 in 10</span>
+            <span class="stat-label">school-age students have ADHD</span>
+          </div>
+          <div class="cs-stat">
+            <span class="stat-number">1 in 20</span>
+            <span class="stat-label">school-age students have dyslexia</span>
+          </div>
+          <div class="cs-stat">
+            <span class="stat-number">20–25%</span>
+            <span class="stat-label">of students have learned about disabilities in class</span>
+          </div>
+        </div>
+      </section>
+
+      <hr class="cs-divider">
+
+      <!-- ART DIRECTION -->
+      <section class="cs-section">
+        <h2>Art Direction</h2>
+        <h3>Visual identity &amp; design system</h3>
+        <p>Add your character designs, sprite sheets, color palette, environment concepts, and UI assets here.</p>
+        <!-- Replace the placeholders below with your actual art assets -->
+        <div class="cs-image-grid">
+          <div class="cs-placeholder">Character sprites / sprite sheets</div>
+          <div class="cs-placeholder">Color palette</div>
+          <div class="cs-placeholder">Environment concepts</div>
+          <div class="cs-placeholder">UI assets / menus</div>
+        </div>
+      </section>
+
+      <hr class="cs-divider">
+
+      <!-- DEVELOPMENT PROCESS -->
+      <section class="cs-section">
+        <h2>Development Process</h2>
+        <h3>From concept to playable game</h3>
+        <p>Add your early sketches, wireframes, prototypes, and development screenshots here.</p>
+        <!-- Replace the placeholders below with your actual process assets -->
+        <div class="cs-image-grid">
+          <div class="cs-placeholder">Early sketches / concepts</div>
+          <div class="cs-placeholder">Wireframes / prototypes</div>
+          <div class="cs-placeholder">Development screenshots</div>
+        </div>
+      </section>
+
+      <hr class="cs-divider">
+
+      <!-- FINAL GAME -->
+      <section class="cs-section">
+        <h2>Final Game</h2>
+        <h3>The finished experience</h3>
+        <div class="cs-image-grid">
+          <img src="img/potionsPic1.png" alt="Potion Lab mini-game — ADHD simulation" class="popup-image">
+          <img src="img/spellingPic1.2.png" alt="Spell Trial mini-game — dyslexia simulation" class="popup-image">
+          <img src="img/epiloguePic1.png" alt="Session complete epilogue screen" class="popup-image">
+        </div>
+        <a href="https://4859-project.vercel.app/gameplay/dashboard" target="_blank" rel="noopener noreferrer" class="cs-play-cta">🎮 Play Magidemia</a>
+      </section>
+
+      <hr class="cs-divider">
+
+      <!-- CASE STUDY PDF -->
+      <section class="cs-section">
+        <h2>Case Study</h2>
+        <h3>Full project documentation</h3>
+        <p>Read the complete capstone poster documenting our research, process, and findings.</p>
+        <a href="img/Poster-Template-V.pdf.pdf" target="_blank" rel="noopener noreferrer" class="cs-pdf-link">📄 View Case Study PDF</a>
+      </section>
+
+      <hr class="cs-divider">
+
+      <!-- REFLECTION -->
+      <section class="cs-section">
+        <h2>Reflection</h2>
+        <h3>What I took away</h3>
+        <p>Through Magidemia, I learned how visual design, storytelling, and interaction design can work together to create empathy-driven experiences. Creating the game's art direction and animated assets strengthened my skills in both digital design and collaborative development.</p>
+      </section>
+
       <a href="portfolio.html" class="back-link">&larr; Back to Portfolio</a>
-    </section>
-    <footer> &copy; 2025 Chloe Chin </footer>
+
+    </div>
+
+    <footer>&copy; 2025 Chloe Chin</footer>
 
     <div id="pdfModal" class="pdf-modal">
       <span class="close-modal">&times;</span>
