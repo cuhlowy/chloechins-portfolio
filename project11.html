@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/resume.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <style>
       .cs-page {
         max-width: 900px;
@@ -19,16 +20,12 @@
       .cs-hero {
         position: relative;
         width: 100%;
-        max-height: 520px;
-        overflow: hidden;
-        margin-bottom: 64px;
-      }
-      .cs-hero img {
-        width: 100%;
         height: 520px;
-        object-fit: cover;
-        object-position: center top;
-        display: block;
+        background-image: url('img/mainmenu1.png');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center top;
+        margin-bottom: 64px;
       }
       .cs-hero-overlay {
         position: absolute;
@@ -40,8 +37,9 @@
         padding: 40px 48px;
       }
       .cs-hero-overlay h1 {
+        font-family: 'VT323', monospace;
         color: #fff;
-        font-size: 52px;
+        font-size: 72px;
         margin: 0 0 8px;
       }
       .cs-hero-overlay p {
@@ -64,8 +62,8 @@
       }
       .cs-hero-buttons a:hover { opacity: 0.85; }
       .btn-primary {
-        background: #fff;
-        color: #111;
+        background: #7c5cbf;
+        color: #fff;
       }
       .btn-secondary {
         background: transparent;
@@ -85,7 +83,8 @@
         margin: 0 0 12px;
       }
       .cs-section h3 {
-        font-size: 28px;
+        font-family: 'VT323', monospace;
+        font-size: 36px;
         margin: 0 0 16px;
         color: #111;
       }
@@ -131,8 +130,8 @@
         text-align: center;
       }
       .cs-stat .stat-number {
-        font-size: 36px;
-        font-weight: 700;
+        font-family: 'VT323', monospace;
+        font-size: 48px;
         color: #7c5cbf;
         display: block;
       }
@@ -149,12 +148,15 @@
         grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
         gap: 16px;
         margin-top: 20px;
+        justify-items: center;
       }
       .cs-image-grid img {
         width: 100%;
         border-radius: 8px;
         box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         cursor: pointer;
+        display: block;
+        margin: 0 auto;
       }
       .cs-image-grid img:hover {
         transform: scale(1.02);
@@ -220,7 +222,7 @@
       }
 
       @media (max-width: 640px) {
-        .cs-hero img { height: 340px; }
+        .cs-hero { height: 340px; background-attachment: scroll; }
         .cs-hero-overlay { padding: 24px; }
         .cs-hero-overlay h1 { font-size: 34px; }
         .cs-image-grid { grid-template-columns: 1fr; }
@@ -252,7 +254,6 @@
 
     <!-- HERO -->
     <div class="cs-hero">
-      <img src="img/mainmenu1.png" alt="Magidemia main menu — pixel art castle at sunset">
       <div class="cs-hero-overlay">
         <h1>Magidemia</h1>
         <p>Challenge misconceptions about learning disabilities.</p>
@@ -330,13 +331,16 @@
       <section class="cs-section">
         <h2>Art Direction</h2>
         <h3>Visual identity &amp; design system</h3>
-        <p>Add your character designs, sprite sheets, color palette, environment concepts, and UI assets here.</p>
         <!-- Replace the placeholders below with your actual art assets -->
-        <div class="cs-image-grid">
-          <div class="cs-placeholder">Character sprites / sprite sheets</div>
-          <div class="cs-placeholder">Color palette</div>
-          <div class="cs-placeholder">Environment concepts</div>
-          <div class="cs-placeholder">UI assets / menus</div>
+        <img src="img/magidemia color palette.png" alt="Magidemia color palette" class="popup-image" style="width:100%; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1); margin-top:20px; display:block;">
+        <div style="display:flex; gap:16px; margin-top:16px; align-items:stretch;">
+          <img src="img/class_room.png" alt="Classroom environment concept" class="popup-image" style="flex:1; width:0; object-fit:cover; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+          <div style="flex:1; display:grid; grid-template-columns: repeat(2, 1fr); gap:12px; align-items:center; justify-items:center; background:#f9f9f9; border-radius:8px; padding:20px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+            <img src="img/full ghost.gif" alt="Umbra ghost character animation" class="popup-image" style="width:100%; max-width:120px; height:auto; box-shadow:none;">
+            <img src="img/dragon.gif" alt="Dragon character animation" class="popup-image" style="width:100%; max-width:120px; height:auto; box-shadow:none;">
+            <img src="img/magi fireball.gif" alt="Magidemia fireball UI asset" class="popup-image" style="width:100%; max-width:120px; height:auto; box-shadow:none;">
+            <img src="img/magi explode.gif" alt="Magidemia explosion UI asset" class="popup-image" style="width:100%; max-width:120px; height:auto; box-shadow:none;">
+          </div>
         </div>
       </section>
 
@@ -346,12 +350,13 @@
       <section class="cs-section">
         <h2>Development Process</h2>
         <h3>From concept to playable game</h3>
-        <p>Add your early sketches, wireframes, prototypes, and development screenshots here.</p>
+        <p>We first mapped out how we wanted our game to flow. Then, we started to develop the game using placeholder images.</p>
         <!-- Replace the placeholders below with your actual process assets -->
-        <div class="cs-image-grid">
-          <div class="cs-placeholder">Early sketches / concepts</div>
-          <div class="cs-placeholder">Wireframes / prototypes</div>
-          <div class="cs-placeholder">Development screenshots</div>
+        <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:16px; margin-top:20px;">
+          <img src="img/magidemicaproto.png" alt="Magidemia early prototype" class="popup-image" style="width:100%; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+          <img src="img/magidemia wireframe.png" alt="Magidemia wireframe" class="popup-image" style="width:100%; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+          <img src="img/magidemia draft.png" alt="Magidemia development screenshot" class="popup-image" style="width:100%; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+          <img src="img/magidemia spelling.png" alt="Magidemia spelling mini-game development screenshot" class="popup-image" style="width:100%; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
         </div>
       </section>
 
@@ -392,7 +397,7 @@
 
     </div>
 
-    <footer>&copy; 2025 Chloe Chin</footer>
+    <footer>&copy; 2026 Chloe Chin</footer>
 
     <div id="pdfModal" class="pdf-modal">
       <span class="close-modal">&times;</span>
