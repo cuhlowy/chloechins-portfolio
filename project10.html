@@ -8,6 +8,164 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/resume.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <style>
+      .cs-page {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 32px 80px;
+      }
+
+      /* Hero */
+      .cs-hero {
+        position: relative;
+        width: 100%;
+        height: 520px;
+        background-image: url('img/Final Crime Scene.png');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center top;
+        margin-bottom: 64px;
+      }
+      .cs-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.75) 40%, rgba(0,0,0,0.1) 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 40px 48px;
+      }
+      .cs-hero-overlay h1 {
+        color: #fff;
+        font-size: 56px;
+        margin: 0 0 8px;
+      }
+      .cs-hero-overlay p {
+        color: rgba(255,255,255,0.85);
+        font-size: 18px;
+        margin: 0 0 24px;
+      }
+      .cs-hero-buttons {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .cs-hero-buttons a {
+        padding: 10px 22px;
+        border-radius: 6px;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: opacity 0.2s;
+      }
+      .cs-hero-buttons a:hover { opacity: 0.85; }
+      .btn-primary {
+        background: #7c5cbf;
+        color: #fff;
+      }
+      .btn-secondary {
+        background: transparent;
+        color: #fff;
+        border: 2px solid rgba(255,255,255,0.7);
+      }
+
+      /* Sections */
+      .cs-section {
+        margin-bottom: 64px;
+      }
+      .cs-section h2 {
+        font-size: 13px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #888;
+        margin: 0 0 12px;
+      }
+      .cs-section h3 {
+        font-size: 28px;
+        margin: 0 0 16px;
+        color: #111;
+      }
+      .cs-section p {
+        font-size: 17px;
+        line-height: 1.75;
+        color: #333;
+        margin: 0 0 16px;
+      }
+      .cs-section ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+      .cs-section ul li {
+        font-size: 17px;
+        line-height: 1.75;
+        color: #333;
+        margin-bottom: 6px;
+      }
+
+      /* My Role highlight */
+      .cs-role {
+        background: #f7f5ff;
+        border-left: 4px solid #7c5cbf;
+        border-radius: 8px;
+        padding: 28px 32px;
+      }
+      .cs-role h3 { margin-top: 0; }
+
+      /* Image grids */
+      .cs-image-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 16px;
+        margin-top: 20px;
+        justify-items: center;
+      }
+      .cs-image-grid img {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+      }
+      .cs-image-grid img:hover {
+        transform: scale(1.02);
+        transition: transform 0.2s;
+      }
+
+      /* Case Study PDF */
+      .cs-pdf-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 2px solid #7c5cbf;
+        color: #7c5cbf;
+        text-decoration: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 16px;
+        transition: background 0.2s, color 0.2s;
+      }
+      .cs-pdf-link:hover {
+        background: #7c5cbf;
+        color: #fff;
+      }
+
+      /* Divider */
+      .cs-divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 0 0 64px;
+      }
+
+      @media (max-width: 640px) {
+        .cs-hero { height: 340px; background-attachment: scroll; }
+        .cs-hero-overlay { padding: 24px; }
+        .cs-hero-overlay h1 { font-size: 34px; }
+        .cs-image-grid { grid-template-columns: 1fr; }
+      }
+    </style>
   </head>
   <body>
     <header class="header">
@@ -23,7 +181,6 @@
           </span>
         </button>
         <nav class="nav-links" aria-label="Main navigation">
-          <!-- <a href="index.html">Home</a> -->
           <a href="portfolio.html">Portfolio</a>
           <a href="about.html">About</a>
           <a href="resume.html">Resume</a>
@@ -31,41 +188,101 @@
         </nav>
       </div>
     </header>
-    <div class="project-text">
+
+    <!-- HERO -->
+    <div class="cs-hero">
+      <div class="cs-hero-overlay">
         <h1>Case Closed</h1>
-        <p>Case Closed is an interactive investigative experience that blends storytelling with user-centered design. The project challenges users to engage with a digital crime scene by analyzing clues, interpreting visual information, and making connections to solve a narrative-driven mystery.
-
-          Designed with a focus on usability and engagement, the experience emphasizes intuitive interaction, clear visual hierarchy, and progressive information discovery. Through this project, I explored how interface design and narrative structure can work together to guide user behavior, encourage critical thinking, and create a sense of immersion..</p>
-
-          <a href="Case Closed_ CSC 4243 Final Product - Google Docs.pdf"
-          class="download-resume open-pdf">
-         📄 View Case Study
-       </a>
-      </div>
-    <section class="project-detail">
-      <div class="project-container">
-        <div class="project-image">
-          <img src="img/CaseClosedlogo.png" alt="Logo of the Case Closed game" class="popup-image">
+        <p>An interactive investigative experience where design meets mystery.</p>
+        <div class="cs-hero-buttons">
+          <a href="Case Closed_ CSC 4243 Final Product - Google Docs.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary">📄 View Case Study</a>
         </div>
-        <div class="project-image">
-            <img src="img/Case closed ethan.png" alt="Image of Ethan's body" class="popup-image">
-          </div>
-          <div class="project-image">
-            <img src="img/Final Crime Scene.png" alt="Dark illustration of girl opening her third eye" class="popup-image">
-          </div>
-
       </div>
-      <a href="portfolio.html" class="back-link">&larr; Back to Portfolio</a>
-    </section>
-    <footer> &copy; 2025 Chloe Chin </footer>
+    </div>
 
+    <div class="cs-page">
+
+      <!-- THE CHALLENGE -->
+      <section class="cs-section">
+        <h2>The Challenge</h2>
+        <h3>Making investigation feel intuitive</h3>
+        <p>Designing an interactive crime scene experience requires balancing narrative tension with clear usability. The challenge was to guide users through a complex mystery without hand-holding — letting them feel like real investigators while ensuring the interface never got in the way.</p>
+      </section>
+
+      <hr class="cs-divider">
+
+      <!-- THE GOAL -->
+      <section class="cs-section">
+        <h2>The Goal</h2>
+        <h3>What we set out to do</h3>
+        <ul>
+          <li>Create an immersive narrative-driven digital experience.</li>
+          <li>Design an interface that supports progressive information discovery.</li>
+          <li>Encourage critical thinking through visual clues and interaction design.</li>
+          <li>Maintain a sense of mystery while keeping the experience accessible.</li>
+        </ul>
+      </section>
+
+      <hr class="cs-divider">
+
+      <!-- MY ROLE -->
+      <section class="cs-section">
+        <h2>My Role</h2>
+        <h3>What I contributed</h3>
+        <ul>
+          <li>Designed the visual identity and art direction for the experience.</li>
+          <li>Created character illustrations and environmental artwork.</li>
+          <li>Developed the user interface and interaction flows.</li>
+          <li>Worked on the narrative structure and information hierarchy.</li>
+          <li>Contributed to usability testing and iteration.</li>
+        </ul>
+      </section>
+
+      <hr class="cs-divider">
+
+      <!-- DESIGN HIGHLIGHTS -->
+      <section class="cs-section">
+        <h2>Design Highlights</h2>
+        <h3>Visuals from the investigation</h3>
+        <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:16px; margin-top:20px;">
+          <img src="img/CaseClosedlogo.png" alt="Case Closed logo" class="popup-image" style="width:100%; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+          <img src="img/Final Crime Scene.png" alt="Final crime scene illustration" class="popup-image" style="width:100%; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+          <img src="img/Case closed ethan.png" alt="Character illustration of Ethan" class="popup-image" style="width:100%; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+          <img src="img/CASECLOSED TYLER ARM.png" alt="Character illustration of Tyler" class="popup-image" style="width:100%; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+        </div>
+        <img src="img/CASECLOSED_chain.png" alt="Case Closed chain graphic element" class="popup-image" style="width:100%; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1); margin-top:16px;">
+      </section>
+
+      <hr class="cs-divider">
+
+      <!-- CASE STUDY PDF -->
+      <section class="cs-section">
+        <h2>Case Study</h2>
+        <h3>Full project documentation</h3>
+        <p>Read the complete case study documenting the research, design process, and final outcomes.</p>
+        <a href="Case Closed_ CSC 4243 Final Product - Google Docs.pdf" target="_blank" rel="noopener noreferrer" class="cs-pdf-link">📄 View Case Study PDF</a>
+      </section>
+
+      <hr class="cs-divider">
+
+      <!-- REFLECTION -->
+      <section class="cs-section">
+        <h2>Reflection</h2>
+        <h3>What I took away</h3>
+        <p>Case Closed taught me how interface design and narrative structure can work together to shape user behavior. Designing for a mystery experience pushed me to think carefully about information hierarchy, visual pacing, and how to create tension through design — skills that carry over into any user-centered work.</p>
+      </section>
+
+      <a href="portfolio.html" class="back-link">&larr; Back to Portfolio</a>
+
+    </div>
+
+    <footer>&copy; 2026 Chloe Chin</footer>
 
     <div id="pdfModal" class="pdf-modal">
-        <span class="close-modal">&times;</span>
-        <iframe id="pdfViewer" src="" frameborder="0"></iframe>
-      </div>
+      <span class="close-modal">&times;</span>
+      <iframe id="pdfViewer" src="" frameborder="0"></iframe>
+    </div>
 
     <script src="js/main.js"></script>
-
-</body>
+  </body>
 </html>
