@@ -60,7 +60,7 @@
       }
       .cs-hero-buttons a:hover { opacity: 0.85; }
       .btn-primary {
-        background: #7c5cbf;
+        background: #003366;
         color: #fff;
       }
       .btn-secondary {
@@ -142,7 +142,7 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        background: #7c5cbf;
+        background: #003366;
         color: #fff;
         text-decoration: none;
         padding: 14px 28px;
@@ -152,15 +152,15 @@
         margin-top: 24px;
         transition: background 0.2s;
       }
-      .cs-play-cta:hover { background: #6448a8; }
+      .cs-play-cta:hover { background: #003366; }
 
       /* Case Study PDF */
       .cs-pdf-link {
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        border: 2px solid #7c5cbf;
-        color: #7c5cbf;
+        border: 2px solid #003366;
+        color: #003366;
         text-decoration: none;
         padding: 12px 24px;
         border-radius: 8px;
@@ -170,7 +170,7 @@
         transition: background 0.2s, color 0.2s;
       }
       .cs-pdf-link:hover {
-        background: #7c5cbf;
+        background: #003366;
         color: #fff;
       }
 
@@ -231,7 +231,7 @@
       }
       .cs-sidenav a:hover,
       .cs-sidenav a.active {
-        color: #7c5cbf;
+        color: #003366;
       }
       .cs-sidenav a .dot {
         width: 8px;
@@ -349,23 +349,23 @@
         <p>We conducted usability testing to evaluate how intuitively users could navigate the investigation experience. Participants were asked to complete key tasks like finding clues, switching tabs, and identifying suspects.</p>
         <div style="display:flex; gap:20px; flex-wrap:wrap; margin-top:24px;">
           <div style="flex:1; min-width:160px; background:#f4f4f4; border-radius:10px; padding:20px 24px; text-align:center;">
-            <span style="font-size:36px; font-weight:700; color:#7c5cbf; display:block;">10</span>
+            <span style="font-size:36px; font-weight:700; color:#003366; display:block;">10</span>
             <span style="font-size:14px; color:#555; margin-top:4px; display:block;">Participants</span>
           </div>
           <div style="flex:1; min-width:160px; background:#f4f4f4; border-radius:10px; padding:20px 24px; text-align:center;">
             <span style="font-size:14px; font-weight:600; color:#555; display:block; margin-bottom:6px;">Usability</span>
             <span style="color:#f5a623; font-size:20px; letter-spacing:2px;">★★★★☆</span>
-            <span style="font-size:24px; font-weight:700; color:#7c5cbf; display:block; margin-top:4px;">4.6</span>
+            <span style="font-size:24px; font-weight:700; color:#003366; display:block; margin-top:4px;">4.6</span>
           </div>
           <div style="flex:1; min-width:160px; background:#f4f4f4; border-radius:10px; padding:20px 24px; text-align:center;">
             <span style="font-size:14px; font-weight:600; color:#555; display:block; margin-bottom:6px;">Navigation</span>
             <span style="color:#f5a623; font-size:20px; letter-spacing:2px;">★★★★★</span>
-            <span style="font-size:24px; font-weight:700; color:#7c5cbf; display:block; margin-top:4px;">4.7</span>
+            <span style="font-size:24px; font-weight:700; color:#003366; display:block; margin-top:4px;">4.7</span>
           </div>
           <div style="flex:1; min-width:160px; background:#f4f4f4; border-radius:10px; padding:20px 24px; text-align:center;">
             <span style="font-size:14px; font-weight:600; color:#555; display:block; margin-bottom:6px;">Clarity</span>
             <span style="color:#f5a623; font-size:20px; letter-spacing:2px;">★★★★☆</span>
-            <span style="font-size:24px; font-weight:700; color:#7c5cbf; display:block; margin-top:4px;">4.3</span>
+            <span style="font-size:24px; font-weight:700; color:#003366; display:block; margin-top:4px;">4.3</span>
           </div>
         </div>
       <div>
@@ -402,6 +402,29 @@
         <p>Designing Case Closed taught me that successful interaction design is about supporting how users think. By combining user research, iterative prototyping, and usability testing, I learned how thoughtful interface design can transform a complex investigation into an intuitive and engaging experience.</p>
       </section>
 
+      <hr class="cs-divider">
+
+      <!-- TEAM CREDITS -->
+      <section class="cs-section" id="credits">
+        <h2>Team Credits</h2>
+        <h3>The people behind Case Closed</h3>
+        <div style="display:flex; gap:32px; flex-wrap:wrap; margin-top:20px;">
+          <div>
+            <p style="font-weight:600; margin-bottom:6px; color:#111;">Programming</p>
+            <ul>
+              <li>Kyla Abshire</li>
+              <li>Claire Bonius</li>
+            </ul>
+          </div>
+          <div>
+            <p style="font-weight:600; margin-bottom:6px; color:#111;">Visual Design, UI &amp; UX Research</p>
+            <ul>
+              <li>Chloe Chin</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <a href="portfolio.html" class="back-link">&larr; Back to Portfolio</a>
 
     </div>
@@ -420,11 +443,12 @@
       <a href="#usability"><span class="label">Usability Testing</span><span class="dot"></span></a>
       <a href="#prototype"><span class="label">Figma Prototype</span><span class="dot"></span></a>
       <a href="#reflection"><span class="label">Reflection</span><span class="dot"></span></a>
+      <a href="#credits"><span class="label">Team Credits</span><span class="dot"></span></a>
     </nav>
 
     <script src="js/main.js"></script>
     <script>
-      const sections = document.querySelectorAll('#challenge, #low-fi, #high-fi, #usability, #prototype, #reflection');
+      const sections = document.querySelectorAll('#challenge, #low-fi, #high-fi, #usability, #prototype, #reflection, #credits');
       const navLinks = document.querySelectorAll('.cs-sidenav a');
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {

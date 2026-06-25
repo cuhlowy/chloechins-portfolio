@@ -437,6 +437,36 @@
         <p>Through Magidemia, I learned how visual design, storytelling, and interaction design can work together to create empathy-driven experiences. Creating the game's art direction and animated assets strengthened my skills in both digital design and collaborative development.</p>
       </section>
 
+      <hr class="cs-divider">
+
+      <!-- TEAM CREDITS -->
+      <section class="cs-section" id="credits">
+        <h2>Team Credits</h2>
+        <h3>The people behind Magidemia</h3>
+        <p>Magidemia was developed collaboratively by a multidisciplinary team of five students.</p>
+        <div style="display:flex; gap:32px; flex-wrap:wrap; margin-top:20px;">
+          <div>
+            <p style="font-weight:600; margin-bottom:6px; color:#111;">Programming</p>
+            <ul>
+              <li>Jeramyah Malveaux</li>
+              <li>Eberechi Nwosu </li>
+            </ul>
+          </div>
+          <div>
+            <p style="font-weight:600; margin-bottom:6px; color:#111;">Game Design</p>
+            <ul>
+              <li>Caleb Garza</li>
+            </ul>
+          </div>
+          <div>
+            <p style="font-weight:600; margin-bottom:6px; color:#111;">Visual Design</p>
+            <ul>
+              <li>Chloe Chin</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <a href="portfolio.html" class="back-link">&larr; Back to Portfolio</a>
 
     </div>
@@ -457,11 +487,12 @@
       <a href="#process"><span class="label">Development</span><span class="dot"></span></a>
       <a href="#game"><span class="label">Final Game</span><span class="dot"></span></a>
       <a href="#reflection"><span class="label">Reflection</span><span class="dot"></span></a>
+      <a href="#credits"><span class="label">Team Credits</span><span class="dot"></span></a>
     </nav>
 
     <script src="js/main.js"></script>
     <script>
-      const sections = document.querySelectorAll('#challenge, #goal, #role, #research, #art, #process, #game, #reflection');
+      const sections = document.querySelectorAll('#challenge, #goal, #role, #research, #art, #process, #game, #reflection, #credits');
       const navLinks = document.querySelectorAll('.cs-sidenav a');
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {

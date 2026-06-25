@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="img/favicon-32-tight.png" type="image/png" sizes="32x32">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Show Campaign - Chloe Chin</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/resume.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+      .cs-page {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 32px 80px;
+      }
+
+      /* Hero */
+      .cs-hero {
+        position: relative;
+        width: 100%;
+        height: 520px;
+        background-color: #1a1a1a;
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 64px;
+      }
+      .cs-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.75) 40%, rgba(0,0,0,0.1) 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 40px 48px;
+      }
+      .cs-hero-overlay h1 {
+        color: #fff;
+        font-size: 56px;
+        margin: 0 0 8px;
+      }
+      .cs-hero-overlay p {
+        color: rgba(255,255,255,0.85);
+        font-size: 18px;
+        margin: 0 0 24px;
+      }
+      .cs-hero-buttons {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .cs-hero-buttons a {
+        padding: 10px 22px;
+        border-radius: 6px;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: opacity 0.2s;
+      }
+      .cs-hero-buttons a:hover { opacity: 0.85; }
+      .btn-primary {
+        background: #c9a96e;
+        color: #fff;
+      }
+      .btn-secondary {
+        background: transparent;
+        color: #fff;
+        border: 2px solid rgba(255,255,255,0.7);
+      }
+
+      /* Sections */
+      .cs-section {
+        margin-bottom: 64px;
+      }
+      .cs-section h2 {
+        font-size: 13px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #888;
+        margin: 0 0 12px;
+      }
+      .cs-section h3 {
+        font-size: 28px;
+        margin: 0 0 16px;
+        color: #111;
+      }
+      .cs-section p {
+        font-size: 17px;
+        line-height: 1.75;
+        color: #333;
+        margin: 0 0 16px;
+      }
+      .cs-section ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+      .cs-section ul li {
+        font-size: 17px;
+        line-height: 1.75;
+        color: #333;
+        margin-bottom: 6px;
+      }
+
+      /* Placeholder asset slots */
+      .cs-placeholder {
+        background: #f4f4f4;
+        border: 2px dashed #ccc;
+        border-radius: 8px;
+        height: 260px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #aaa;
+        font-size: 14px;
+        margin-top: 20px;
+      }
+
+      /* Side nav */
+      .cs-sidenav {
+        position: fixed;
+        top: 50%;
+        right: 28px;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        z-index: 100;
+      }
+      .cs-sidenav a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: #aaa;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        transition: color 0.2s;
+        justify-content: flex-end;
+      }
+      .cs-sidenav a:hover,
+      .cs-sidenav a.active { color: #c9a96e; }
+      .cs-sidenav a .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: currentColor;
+        flex-shrink: 0;
+        transition: transform 0.2s;
+      }
+      .cs-sidenav a.active .dot { transform: scale(1.5); }
+      .cs-sidenav a .label {
+        opacity: 0;
+        transition: opacity 0.2s;
+        white-space: nowrap;
+      }
+      .cs-sidenav a:hover .label,
+      .cs-sidenav a.active .label { opacity: 1; }
+      @media (max-width: 1100px) { .cs-sidenav { display: none; } }
+
+      /* Divider */
+      .cs-divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 0 0 64px;
+      }
+
+      @media (max-width: 640px) {
+        .cs-hero { height: 340px; }
+        .cs-hero-overlay { padding: 24px; }
+        .cs-hero-overlay h1 { font-size: 34px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <img src="img/logo.png" alt="Chloe Chin Logo">
+        </a>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="portfolio.html">Portfolio</a>
+          <a href="about.html">About</a>
+          <a href="resume.html">Resume</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <div class="cs-hero">
+      <div class="cs-hero-overlay">
+        <h1>Fashion Show Campaign</h1>
+        <p>A visual campaign capturing the concept, identity, and energy of a fashion show.</p>
+      </div>
+    </div>
+
+    <div class="cs-page">
+
+      <!-- OVERVIEW -->
+      <section class="cs-section" id="overview">
+        <h2>Project Overview</h2>
+        <h3>About the campaign</h3>
+        <p>[ Add project description here ]</p>
+      </section>
+
+      <hr class="cs-divider">
+
+      <!-- CONCEPT -->
+      <section class="cs-section" id="concept">
+        <h2>Concept</h2>
+        <h3>The vision</h3>
+        <p>[ Describe the concept and creative direction ]</p>
+        <div class="cs-placeholder">[ Concept images ]</div>
+      </section>
+
+      <hr class="cs-divider">
+
+      <!-- CAMPAIGN VISUALS -->
+      <section class="cs-section" id="visuals">
+        <h2>Campaign Visuals</h2>
+        <h3>The finished work</h3>
+        <div class="cs-placeholder">[ Campaign images ]</div>
+      </section>
+
+      <hr class="cs-divider">
+
+      <!-- REFLECTION -->
+      <section class="cs-section" id="reflection">
+        <h2>Reflection</h2>
+        <h3>What I took away</h3>
+        <p>[ Add reflection here ]</p>
+      </section>
+
+      <a href="portfolio.html" class="back-link">&larr; Back to Portfolio</a>
+
+    </div>
+
+    <footer>&copy; 2026 Chloe Chin</footer>
+
+    <div id="pdfModal" class="pdf-modal">
+      <span class="close-modal">&times;</span>
+      <iframe id="pdfViewer" src="" frameborder="0"></iframe>
+    </div>
+
+    <nav class="cs-sidenav" aria-label="Page sections">
+      <a href="#overview"><span class="label">Overview</span><span class="dot"></span></a>
+      <a href="#concept"><span class="label">Concept</span><span class="dot"></span></a>
+      <a href="#visuals"><span class="label">Campaign Visuals</span><span class="dot"></span></a>
+      <a href="#reflection"><span class="label">Reflection</span><span class="dot"></span></a>
+    </nav>
+
+    <script src="js/main.js"></script>
+    <script>
+      const sections = document.querySelectorAll('#overview, #concept, #visuals, #reflection');
+      const navLinks = document.querySelectorAll('.cs-sidenav a');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`.cs-sidenav a[href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { threshold: 0.3 });
+      sections.forEach(s => observer.observe(s));
+    </script>
+  </body>
+</html>
