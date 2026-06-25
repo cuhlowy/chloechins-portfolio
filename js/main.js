@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         projects.forEach(project => {
           const category = project.getAttribute("data-category");
   
-          if (filter === "all" || category === filter) {
+          if (filter === "all" || category.split(" ").includes(filter)) {
             project.style.display = "block";
           } else {
             project.style.display = "none";

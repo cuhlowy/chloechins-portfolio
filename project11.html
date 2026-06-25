@@ -214,6 +214,49 @@
         color: #fff;
       }
 
+      /* Side nav */
+      .cs-sidenav {
+        position: fixed;
+        top: 50%;
+        right: 28px;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        z-index: 100;
+      }
+      .cs-sidenav a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: #aaa;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        transition: color 0.2s;
+        justify-content: flex-end;
+      }
+      .cs-sidenav a:hover,
+      .cs-sidenav a.active { color: #7c5cbf; }
+      .cs-sidenav a .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: currentColor;
+        flex-shrink: 0;
+        transition: transform 0.2s;
+      }
+      .cs-sidenav a.active .dot { transform: scale(1.5); }
+      .cs-sidenav a .label {
+        opacity: 0;
+        transition: opacity 0.2s;
+        white-space: nowrap;
+      }
+      .cs-sidenav a:hover .label,
+      .cs-sidenav a.active .label { opacity: 1; }
+      @media (max-width: 1100px) { .cs-sidenav { display: none; } }
+
       /* Divider */
       .cs-divider {
         border: none;
@@ -267,7 +310,7 @@
     <div class="cs-page">
 
       <!-- THE CHALLENGE -->
-      <section class="cs-section">
+      <section class="cs-section" id="challenge">
         <h2>The Challenge</h2>
         <h3>Building empathy through experience</h3>
         <p>Many people struggle to understand the daily experiences of individuals with ADHD and dyslexia. The goal of Magidemia was to create an engaging experience that encourages empathy through gameplay rather than explanation alone.</p>
@@ -276,7 +319,7 @@
       <hr class="cs-divider">
 
       <!-- THE GOAL -->
-      <section class="cs-section">
+      <section class="cs-section" id="goal">
         <h2>The Goal</h2>
         <h3>What we set out to do</h3>
         <ul>
@@ -290,7 +333,7 @@
       <hr class="cs-divider">
 
       <!-- MY ROLE -->
-      <section class="cs-section">
+      <section class="cs-section" id="role">
         <h2>My Role</h2>
         <h3>What I contributed</h3>
           <ul>
@@ -305,7 +348,7 @@
       <hr class="cs-divider">
 
       <!-- RESEARCH & INSPIRATION -->
-      <section class="cs-section">
+      <section class="cs-section" id="research">
         <h2>Research &amp; Inspiration</h2>
         <h3>Understanding the problem space</h3>
         <p>We grounded the project in research on ADHD and dyslexia to understand how these conditions affect learning, attention, and information processing. Educational games and accessibility-first design served as key inspiration for how we structured the gameplay experience.</p>
@@ -328,7 +371,7 @@
       <hr class="cs-divider">
 
       <!-- ART DIRECTION -->
-      <section class="cs-section">
+      <section class="cs-section" id="art">
         <h2>Art Direction</h2>
         <h3>Visual identity &amp; design system</h3>
         <!-- Replace the placeholders below with your actual art assets -->
@@ -347,7 +390,7 @@
       <hr class="cs-divider">
 
       <!-- DEVELOPMENT PROCESS -->
-      <section class="cs-section">
+      <section class="cs-section" id="process">
         <h2>Development Process</h2>
         <h3>From concept to playable game</h3>
         <p>We first mapped out how we wanted our game to flow. Then, we started to develop the game using placeholder images.</p>
@@ -363,7 +406,7 @@
       <hr class="cs-divider">
 
       <!-- FINAL GAME -->
-      <section class="cs-section">
+      <section class="cs-section" id="game">
         <h2>Final Game</h2>
         <h3>The finished experience</h3>
         <div style="text-align:center; margin-bottom:20px;">
@@ -388,7 +431,7 @@
       <hr class="cs-divider">
 
       <!-- REFLECTION -->
-      <section class="cs-section">
+      <section class="cs-section" id="reflection">
         <h2>Reflection</h2>
         <h3>What I took away</h3>
         <p>Through Magidemia, I learned how visual design, storytelling, and interaction design can work together to create empathy-driven experiences. Creating the game's art direction and animated assets strengthened my skills in both digital design and collaborative development.</p>
@@ -405,6 +448,31 @@
       <iframe id="pdfViewer" src="" frameborder="0"></iframe>
     </div>
 
+    <nav class="cs-sidenav" aria-label="Page sections">
+      <a href="#challenge"><span class="label">The Challenge</span><span class="dot"></span></a>
+      <a href="#goal"><span class="label">The Goal</span><span class="dot"></span></a>
+      <a href="#role"><span class="label">My Role</span><span class="dot"></span></a>
+      <a href="#research"><span class="label">Research</span><span class="dot"></span></a>
+      <a href="#art"><span class="label">Art Direction</span><span class="dot"></span></a>
+      <a href="#process"><span class="label">Development</span><span class="dot"></span></a>
+      <a href="#game"><span class="label">Final Game</span><span class="dot"></span></a>
+      <a href="#reflection"><span class="label">Reflection</span><span class="dot"></span></a>
+    </nav>
+
     <script src="js/main.js"></script>
+    <script>
+      const sections = document.querySelectorAll('#challenge, #goal, #role, #research, #art, #process, #game, #reflection');
+      const navLinks = document.querySelectorAll('.cs-sidenav a');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`.cs-sidenav a[href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { threshold: 0.3 });
+      sections.forEach(s => observer.observe(s));
+    </script>
   </body>
 </html>

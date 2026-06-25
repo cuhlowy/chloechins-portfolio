@@ -191,18 +191,70 @@
       .prototype-section p {
         margin-bottom: 0;
       }
-      .prototype-phone {
+      .prototype-wrapper {
+        width: 350px;
+        height: 780px;
+        margin: 0 auto;
+        overflow: visible;
+      }
+      .prototype-wrapper iframe {
         width: 412px;
         height: 917px;
-        overflow: hidden;
-        margin: 0 auto;
-      }
-      .prototype-phone iframe {
-        width: 515px;
-        height: 1146px;
         border: none;
-        transform: scale(0.8);
-        transform-origin: top left;
+        border-radius: 24px;
+        transform: scale(0.85);
+        transform-origin: top center;
+      }
+
+      /* Side nav */
+      .cs-sidenav {
+        position: fixed;
+        top: 50%;
+        right: 28px;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        z-index: 100;
+      }
+      .cs-sidenav a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: #aaa;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        transition: color 0.2s;
+        justify-content: flex-end;
+      }
+      .cs-sidenav a:hover,
+      .cs-sidenav a.active {
+        color: #7c5cbf;
+      }
+      .cs-sidenav a .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: currentColor;
+        flex-shrink: 0;
+        transition: transform 0.2s;
+      }
+      .cs-sidenav a.active .dot {
+        transform: scale(1.5);
+      }
+      .cs-sidenav a .label {
+        opacity: 0;
+        transition: opacity 0.2s;
+        white-space: nowrap;
+      }
+      .cs-sidenav a:hover .label,
+      .cs-sidenav a.active .label {
+        opacity: 1;
+      }
+      @media (max-width: 1100px) {
+        .cs-sidenav { display: none; }
       }
 
       /* Divider */
@@ -246,7 +298,7 @@
     <div class="cs-hero">
       <div class="cs-hero-overlay">
         <h1>Case Closed</h1>
-        <p>An interactive investigative experience where design meets mystery.</p>
+        <p>Designing a mobile-first detective experience that makes investigation intuitive through evidence collection, suspect comparison, and logical deduction.</p>
         <div class="cs-hero-buttons">
           <a href="Case Closed_ CSC 4243 Final Product - Google Docs.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary">📄 View Case Study</a>
         </div>
@@ -255,46 +307,20 @@
 
     <div class="cs-page">
 
-      <!-- PROJECT OVERVIEW -->
-      <section class="cs-section">
-        <h2>Project Overview</h2>
-        <h3>What is Case Closed?</h3>
-        <p>Case Closed is an interactive investigative experience that blends storytelling with user-centered design. The project challenges users to engage with a digital crime scene by analyzing clues, interpreting visual information, and making connections to solve a narrative-driven mystery.</p>
-        <ul>
-          <li>Create an immersive narrative-driven digital experience.</li>
-          <li>Design an interface that supports progressive information discovery.</li>
-          <li>Encourage critical thinking through visual clues and interaction design.</li>
-          <li>Maintain a sense of mystery while keeping the experience accessible.</li>
-        </ul>
-        <a href="Case Closed_ CSC 4243 Final Product - Google Docs.pdf" target="_blank" rel="noopener noreferrer" class="cs-pdf-link" style="margin-top:24px;">📄 View Case Study PDF</a>
-      </section>
-
-      <hr class="cs-divider">
-
       <!-- THE CHALLENGE -->
-      <section class="cs-section">
+      <section class="cs-section" id="challenge">
         <h2>The Challenge</h2>
         <h3>Making investigation feel intuitive</h3>
-        <p>Designing an interactive crime scene experience requires balancing narrative tension with clear usability. The challenge was to guide users through a complex mystery without hand-holding — letting them feel like real investigators while ensuring the interface never got in the way.</p>
-      </section>
-
-      <hr class="cs-divider">
-
-      <!-- RESEARCH / INSPIRATION -->
-      <section class="cs-section">
-        <h2>Research / Inspiration</h2>
-        <h3>Understanding the problem space</h3>
-        <p>We researched how detective games and mystery narratives structure information disclosure to keep players engaged without frustrating them. This shaped how we paced clue reveals and designed the flow of the experience.</p>
-        <div class="cs-placeholder">[ Research findings / inspiration ]</div>
+        <p>Existing detective games often rely on cluttered interfaces and guesswork, making investigations frustrating instead of rewarding. The goal was to design a mobile-first experience that supports logical reasoning through intuitive interactions.</p>
       </section>
 
       <hr class="cs-divider">
 
       <!-- LOW-FIDELITY WIREFRAMES -->
-      <section class="cs-section">
-        <h2>✨ Low-Fidelity Wireframes</h2>
+      <section class="cs-section" id="low-fi">
+        <h2>Low-Fidelity Wireframes</h2>
         <h3>Early concepts &amp; structure</h3>
-        <p>We mapped out the investigation flow before building, iterating on layout and interaction to ensure clue discovery felt natural and rewarding.</p>
+        <p>Early layouts explored how players would navigate between suspects, evidence, and crime scenes while keeping the experience simple for short play sessions.</p>
         <div style="display:grid; grid-template-columns: 1.4fr 1fr; gap:16px; margin-top:20px;">
           <img src="img/CC LF.png" alt="Case Closed low-fidelity wireframes" class="popup-image" style="width:100%; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
           <img src="img/cc lf 2.png" alt="Case Closed low-fidelity wireframes continued" class="popup-image" style="width:100%; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
@@ -303,41 +329,63 @@
 
       <hr class="cs-divider">
 
-      <!-- DESIGN SYSTEM / BRAND IDENTITY -->
-      <section class="cs-section">
-        <h2>Design System / Brand Identity</h2>
-        <h3>Visual identity &amp; design system</h3>
-        <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:16px; margin-top:20px;">
-          <img src="img/CaseClosedlogo.png" alt="Case Closed logo" class="popup-image" style="width:100%; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
-          <img src="img/CASECLOSED_chain.png" alt="Case Closed chain graphic element" class="popup-image" style="width:100%; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
-        </div>
-      </section>
-
-      <hr class="cs-divider">
-
-      <!-- HIGH-FIDELITY MOCKUPS -->
-      <section class="cs-section">
-        <h2>High-Fidelity Mockups</h2>
+      <!-- Final -->
+      <section class="cs-section" id="Finished-Product">
+        <h2>Finished Product</h2>
         <h3>The finished interface</h3>
-        <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:16px; margin-top:20px;">
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin-top:20px;">
           <img src="img/Case closed ethan.png" alt="Character illustration of Ethan" class="popup-image" style="width:100%; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
-          <img src="img/CASECLOSED TYLER ARM.png" alt="Character illustration of Tyler" class="popup-image" style="width:100%; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
+          <img src="img/Final Crime Scene.png" alt="Final crime scene illustration" class="popup-image" style="width:100%; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1);">
         </div>
-        <img src="img/Final Crime Scene.png" alt="Final crime scene illustration" class="popup-image" style="width:100%; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1); margin-top:16px;">
+        <img src="img/cc hf.png" alt="Case Closed Finished Product" class="popup-image" style="width:100%; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.1); margin-top:16px;">
       </section>
 
       <hr class="cs-divider">
 
-      <!-- INTERACTIVE FIGMA PROTOTYPE -->
-      <section class="prototype-section">
+      <!-- USABILITY -->
+      <section class="cs-section" id="usability">
+        <h2>Usability Testing</h2>
+        <h3>Testing with real users</h3>
+        <p>We conducted usability testing to evaluate how intuitively users could navigate the investigation experience. Participants were asked to complete key tasks like finding clues, switching tabs, and identifying suspects.</p>
+        <div style="display:flex; gap:20px; flex-wrap:wrap; margin-top:24px;">
+          <div style="flex:1; min-width:160px; background:#f4f4f4; border-radius:10px; padding:20px 24px; text-align:center;">
+            <span style="font-size:36px; font-weight:700; color:#7c5cbf; display:block;">10</span>
+            <span style="font-size:14px; color:#555; margin-top:4px; display:block;">Participants</span>
+          </div>
+          <div style="flex:1; min-width:160px; background:#f4f4f4; border-radius:10px; padding:20px 24px; text-align:center;">
+            <span style="font-size:14px; font-weight:600; color:#555; display:block; margin-bottom:6px;">Usability</span>
+            <span style="color:#f5a623; font-size:20px; letter-spacing:2px;">★★★★☆</span>
+            <span style="font-size:24px; font-weight:700; color:#7c5cbf; display:block; margin-top:4px;">4.6</span>
+          </div>
+          <div style="flex:1; min-width:160px; background:#f4f4f4; border-radius:10px; padding:20px 24px; text-align:center;">
+            <span style="font-size:14px; font-weight:600; color:#555; display:block; margin-bottom:6px;">Navigation</span>
+            <span style="color:#f5a623; font-size:20px; letter-spacing:2px;">★★★★★</span>
+            <span style="font-size:24px; font-weight:700; color:#7c5cbf; display:block; margin-top:4px;">4.7</span>
+          </div>
+          <div style="flex:1; min-width:160px; background:#f4f4f4; border-radius:10px; padding:20px 24px; text-align:center;">
+            <span style="font-size:14px; font-weight:600; color:#555; display:block; margin-bottom:6px;">Clarity</span>
+            <span style="color:#f5a623; font-size:20px; letter-spacing:2px;">★★★★☆</span>
+            <span style="font-size:24px; font-weight:700; color:#7c5cbf; display:block; margin-top:4px;">4.3</span>
+          </div>
+        </div>
+      <div>
+        <h3>Key Findings</h3>
+        <p>Players successfully navigated the interface, discovered evidence, and completed investigation tasks with high confidence. Feedback highlighted the suspect comparison feature as particularly effective while suggesting improvements such as autosave and larger text for smaller devices.</p>
+      </div>
+      </section>
+
+      <hr class="cs-divider">
+
+      <!-- PROTOTYPE -->
+      <section class="prototype-section" id="prototype">
         <div class="prototype-text">
-          <h2>Interactive Prototype</h2>
+          <h2>High Fidelity Figma Prototype</h2>
           <p>
             Explore the prototype to experience the investigation flow,
             navigation, and clue interactions.
           </p>
         </div>
-        <div class="prototype-phone">
+        <div class="prototype-wrapper">
           <iframe
             src="https://embed.figma.com/proto/lzwYvrf2gRxEHA9FFrrsyP/Case-CLOSED?node-id=50-22&p=f&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=50%3A22&embed-host=share"
             allowfullscreen>
@@ -348,10 +396,10 @@
       <hr class="cs-divider">
 
       <!-- REFLECTION -->
-      <section class="cs-section">
+      <section class="cs-section" id="reflection">
         <h2>Reflection</h2>
         <h3>What I took away</h3>
-        <p>Case Closed taught me how interface design and narrative structure can work together to shape user behavior. Designing for a mystery experience pushed me to think carefully about information hierarchy, visual pacing, and how to create tension through design — skills that carry over into any user-centered work.</p>
+        <p>Designing Case Closed taught me that successful interaction design is about supporting how users think. By combining user research, iterative prototyping, and usability testing, I learned how thoughtful interface design can transform a complex investigation into an intuitive and engaging experience.</p>
       </section>
 
       <a href="portfolio.html" class="back-link">&larr; Back to Portfolio</a>
@@ -365,6 +413,29 @@
       <iframe id="pdfViewer" src="" frameborder="0"></iframe>
     </div>
 
+    <nav class="cs-sidenav" aria-label="Page sections">
+      <a href="#challenge"><span class="label">The Challenge</span><span class="dot"></span></a>
+      <a href="#low-fi"><span class="label">Low-Fi Wireframes</span><span class="dot"></span></a>
+      <a href="#Finished-Product"><span class="label">Finished Product</span><span class="dot"></span></a>
+      <a href="#usability"><span class="label">Usability Testing</span><span class="dot"></span></a>
+      <a href="#prototype"><span class="label">Figma Prototype</span><span class="dot"></span></a>
+      <a href="#reflection"><span class="label">Reflection</span><span class="dot"></span></a>
+    </nav>
+
     <script src="js/main.js"></script>
+    <script>
+      const sections = document.querySelectorAll('#challenge, #low-fi, #high-fi, #usability, #prototype, #reflection');
+      const navLinks = document.querySelectorAll('.cs-sidenav a');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            navLinks.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`.cs-sidenav a[href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { threshold: 0.3 });
+      sections.forEach(s => observer.observe(s));
+    </script>
   </body>
 </html>
